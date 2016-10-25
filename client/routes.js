@@ -4,11 +4,13 @@ import App from './components/App';
 import FirstPage from './components/FirstPage';
 import SignupPage from './components/signup/SignupPage';
 import ProductDetail from './components/ProductDetail';
+import Checkout from './components/Checkout';
 
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={FirstPage} />
         <Route path="signup" component={SignupPage} />
+        <Route path="checkout" component={Checkout} />
         <Route path="detail/:id" component={ProductDetail} />
         
     </Route>

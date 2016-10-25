@@ -10,5 +10,5 @@ export const PRODUCTS = [
     { id: 5, name: 'Motorola Bravo', src: "/assets/img/phones/motorola-bravo-with-motoblur.0.jpg", price: 119.99,
     info: "The Motorola Bravo has a nice 3.7 inch WVGA display, a slim build, and a multimedia-friendly feature set that includes DLNA support. It has good call quality as well. The Motorola Bravo is a midrange Android smartphone with solid multimedia features."},
     { id: 6, name: 'Motorola Defy', src: "/assets/img/phones/motorola-defy-with-motoblur.0.jpg", price: 139.99,
-    info: "The Motorola Defy, also known as Motorola Defy A8210 & MB525, is an Android-based smartphone from Motorola. It fills a unique market segment, by being one of the few small, IP67 rated smartphones available. It is water-resistant, dust-resistant, and has an impact-resistant screen." },
+    info: "The Motorola Defy, also known as Motorola Defy A8210 & MB525, is an Android-based smartphone from Motorola. It fills a unique market segment, by being one of the few small, IP67 rated smartphones available." },
 ]

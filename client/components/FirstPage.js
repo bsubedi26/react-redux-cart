@@ -28,16 +28,16 @@ class FirstPage extends React.Component {
         {this.props.products.map((product, i) => {
 
           return (
-            <div key={i} className="col s4 card-panel">
+            <div key={i} className="col s6 card-panel">
                 <img src={product.src} height="250" width="250" />
-                <h5 className="center"><span className="chip">{product.id}</span>{product.name}</h5>
+                <h5><span className="chip">{product.id}</span>{product.name}</h5>
                 <p className="light">
                   {product.info}
                 </p>
                 
                 <div className="row">
-                  <button onClick={this.addCart.bind(this, product)} className="btn waves-effect waves-light light-green darken-2">Add to Cart</button>
-                  <Link to={'/detail/'+product.id}> <button className="btn waves-effect waves-light brown lighten-2">Details</button> </Link>
+                  <button onClick={this.addCart.bind(this, product)} className="btn btn-product waves-effect waves-light light-green darken-2">Add to Cart</button>
+                  <Link to={'/detail/'+product.id}> <button className="btn btn-product waves-effect waves-light brown lighten-2">Details</button> </Link>
                 </div>
             </div>
           )

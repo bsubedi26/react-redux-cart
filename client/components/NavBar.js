@@ -5,31 +5,31 @@ import { connect } from 'react-redux';
 class NavBar extends React.Component {
  
   componentDidUpdate() {
-      console.log('update wooo---')
       console.log(this.props.cart)
   }
   render() {
     return (
         <div className="navbar-fixed">
-            <nav>
-            <div className="nav-wrapper light-green lighten-2">
+          <nav>
+            <div className="nav-wrapper light-green lighten-1">
                 <Link to="/" className="brand-logo">React-Cart</Link>
+                
                 <ul className="right hide-on-med-and-down">
-                    <li><Link to="/signup"> <i className="material-icons">shopping_cart</i> </Link> </li>
-                    
+                    <li><Link to="/"> Home </Link> </li>
+                    <li><Link to="/checkout"> Shopping Cart </Link> </li>
+                    <li><Link to="/checkout"> <i className="material-icons">shopping_cart</i> </Link> </li>
                     <li className="chip">
                         Total Items: {this.props.cart.length}
                         <br />
                         Total Cost: {this.props.cart.reduce((total, item) => {
                             total += item.price;
                             var truncated = Math.floor(total * 100) / 100;
-                            return truncated
+                            return truncated;
                         }, 0)}
                     </li>
-                     
                 </ul>
             </div>
-            </nav>
+          </nav>
         </div>
 
     )
