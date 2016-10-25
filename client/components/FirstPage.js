@@ -9,9 +9,6 @@ class FirstPage extends React.Component {
   constructor() {
     super()
   }
-  componentDidMount() {
-
-  }
 
   addCart(product) {
     // console.log(product)
@@ -19,8 +16,8 @@ class FirstPage extends React.Component {
     
   }
 
-  details() {
-    console.log(this.props.products)
+  details(product) {
+    console.log(product)
   }
 
   render() {
@@ -31,27 +28,20 @@ class FirstPage extends React.Component {
         {this.props.products.map((product, i) => {
 
           return (
-            
             <div key={i} className="col s4 card-panel">
                 <img src={product.src} height="250" width="250" />
                 <h5 className="center"><span className="chip">{product.id}</span>{product.name}</h5>
                 <p className="light">
                   {product.info}
                 </p>
-
                 
                 <div className="row">
                   <button onClick={this.addCart.bind(this, product)} className="btn waves-effect waves-light light-green darken-2">Add to Cart</button>
-                  <button onClick={this.details.bind(this)} className="btn waves-effect waves-light brown lighten-2">Details</button>
+                  <Link to={'/detail/'+product.id}> <button className="btn waves-effect waves-light brown lighten-2">Details</button> </Link>
                 </div>
-
             </div>
           )
-
         })}
-
-        
-
 
       </div>
 
