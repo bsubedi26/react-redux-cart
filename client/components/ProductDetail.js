@@ -1,18 +1,60 @@
 import React from 'react';
+import { Link } from 'react-router';
+import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
+import { addCartAction } from '../actions/cartAction';
 
 class ProductDetail extends React.Component {
  
-  componentDidMount() {
+  componentWillMount() {
       console.log(this.props.params.id)
+
+      this.props.products.forEach(product => {
+          if (product.id == this.props.params.id) {
+              this.setState({
+                  product: product
+              })
+            }
+      })
+
   }
+
+  addCart() {
+    this.props.addCartAction(this.state.product)
+  }
+
   render() {
     return (
         <div>
-            <h2>{this.props.params.id}</h2>
+            
+            <div className="col s4 card-panel">
+                <img src={this.state.product.src} height="250" width="250" />
+                <h5 className="center"><span className="chip">{this.state.product.id}</span>{this.state.product.name}</h5>
+                <p className="light">
+                    {this.state.product.info}
+                </p>
+                
+                <div className="row">
+                    <button onClick={this.addCart.bind(this)} className="btn waves-effect waves-light light-green darken-2">Add to Cart</button>
+                    <button onClick={browserHistory.goBack} className="btn waves-effect waves-light brown lighten-2">Go Back</button>
+                </div>
+            </div>
+
         </div>
 
     )
   }
 };
 
-export default ProductDetail;
+ProductDetail.propTypes = {
+  products: React.PropTypes.array.isRequired,
+  addCartAction: React.PropTypes.func.isRequired
+}
+
+function mapStateToProps(state) {
+  return {
+    products: state.storeReducer
+  }
+}
+
+export default connect(mapStateToProps, { addCartAction })(ProductDetail);

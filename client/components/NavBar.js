@@ -41,7 +41,6 @@ NavBar.propTypes = {
 }
 
 function mapStateToProps(state) {
-  console.log('NavBar --- state', state)
   return {
     cart: state.cartReducer
   }
