@@ -28,16 +28,20 @@ class ProductDetail extends React.Component {
         <div>
             
             <div className="col s4 card-panel">
-                <img src={this.state.product.src} height="250" width="250" />
-                <h5 className="center"><span className="chip">{this.state.product.id}</span>{this.state.product.name}</h5>
-                <p className="light">
-                    {this.state.product.info}
-                </p>
-                
                 <div className="row">
-                    <button onClick={this.addCart.bind(this)} className="btn waves-effect waves-light light-green darken-2">Add to Cart</button>
-                    <button onClick={browserHistory.goBack} className="btn waves-effect waves-light brown lighten-2">Go Back</button>
+                    <img className="col s4" src={this.state.product.src} height="250" width="250" />
+                    <h5 className="center"><span className="chip">{this.state.product.id}</span>{this.state.product.name}</h5>
+                    <p className="light">
+                        {this.state.product.info}
+                    </p>
+                    
+                    <div className="row">
+                        <button onClick={this.addCart.bind(this)} className="btn waves-effect waves-light light-green darken-2">Add to Cart</button>
+                        <hr />
+                        <button onClick={browserHistory.goBack} className="btn waves-effect waves-light brown lighten-2">Go Back</button>
+                    </div>
                 </div>
+
             </div>
 
         </div>
