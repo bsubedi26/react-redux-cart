@@ -41,8 +41,8 @@ class FirstPage extends React.Component {
 
                 
                 <div className="row">
-                  <button onClick={this.addCart.bind(this, product)} className="btn waves-effect waves-light light-green darken-3">Add to Cart</button>
-                  <button onClick={this.details.bind(this)} className="btn waves-effect waves-light light-blue darken-3">Details</button>
+                  <button onClick={this.addCart.bind(this, product)} className="btn waves-effect waves-light light-green darken-2">Add to Cart</button>
+                  <button onClick={this.details.bind(this)} className="btn waves-effect waves-light brown lighten-2">Details</button>
                 </div>
 
             </div>
