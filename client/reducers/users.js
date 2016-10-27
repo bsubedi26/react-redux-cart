@@ -1,9 +1,10 @@
 export default function userReducer(state = [], action = {}) {
     switch (action.type) {
         case 'CREATE':
-            console.log('state from reducer', state)
+            console.log(action)
             return [
-                ...state
+                ...state,
+                action.response.data.hi
             ];
          
         default: return state;

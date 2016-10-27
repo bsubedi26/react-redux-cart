@@ -1,23 +1,30 @@
 import express from 'express';
 import User from '../models/user';
-var router = express.Router();
 
+const router = express.Router();
+
+// POST for creating a new user
 router.post('/create', function(req, res) {
     console.log(req.body)
-    // //Instantiating the Model - An instance of Model represents a mongodb document
-    // var userData = new User(req.body.user);
-    // //Saving the model instance to the DB
-    // userData.save(function(err) {
-    //     if ( err ) throw err;
-    //     console.log("User Saved Successfully"); 
-    // }).then(function() {
-	//     res.redirect('/');
-    // });
+    const {username, password, email} = req.body.data;
 
-    res.json({
-        hi: 'hello'
-    })
+    const userData = new User({
+        username: username,
+        password: password,
+        email: email,
+        created_at: new Date()    
+    });
     
+    userData.save(function(err, user) {
+        if (err) throw err;
+        console.log('eeeeeeeeeeee')
+        console.log(user)
+    })
 })
 
+// POST for user login
+router.post('/login', function(req, res) {
+    console.log(req.body)
+    
+})
 export default router;
