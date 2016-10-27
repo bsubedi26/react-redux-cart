@@ -1,6 +1,6 @@
 export default function userReducer(state = [], action = {}) {
     switch (action.type) {
-        case 'CREATE':
+        case 'LOGIN':
             return [
                 ...state,
                 action.response.data,

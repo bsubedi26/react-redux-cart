@@ -6,14 +6,7 @@ export function userCreate(userData) {
     return dispatch => {
         axios.post('/api/users/create', {data: userData})
             .then(response => { 
-
                 browserHistory.push('/login');
-
-                // dispatch({
-                //     type: 'CREATE',
-                //     response: response
-                // })
-                
             })
     }
 }
@@ -25,7 +18,7 @@ export function login(userData) {
             .then(response => {
                 console.log('response', response)
                 dispatch({
-                    type: 'CREATE',
+                    type: 'LOGIN',
                     response: response,
                     isAuthenicated: true
                 })
