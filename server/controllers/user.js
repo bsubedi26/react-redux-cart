@@ -13,6 +13,10 @@ router.post('/create', function(req, res) {
     // }).then(function() {
 	//     res.redirect('/');
     // });
+
+    res.json({
+        hi: 'hello'
+    })
     
 })
 

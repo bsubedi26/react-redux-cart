@@ -9,7 +9,11 @@ export default function cartReducer(state = [], action = {}) {
 
         case 'REMOVE':
             //  return a new array excluding the product that needs to be removed
-            return state.filter(product => product.id != action.product.id)
+            let index = state.findIndex((product) => product.id === action.product.id); 
+            return [
+                ...state.slice(0, index),
+                ...state.slice(index + 1)  
+            ]
 
         default: return state;
     }

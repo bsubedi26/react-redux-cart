@@ -1,6 +1,8 @@
 var React = require('react');
 var axios = require('axios');
+import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
+import { userCreate } from '../../actions/usersAction';
 
 class SignupPage extends React.Component {
   constructor(props) {
@@ -11,7 +13,6 @@ class SignupPage extends React.Component {
       email: ""
     }
   }
- 
 
   setChange(event) {
     var obj = {};
@@ -22,21 +23,12 @@ class SignupPage extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.userSignupRequest(this.state).then(
-        () => {
-          this.props.addFlashMessage({
-            type: 'success',
-            text: 'You have signed up successfully. Welcome!'
-          })
-          // Redirect user to / path
-          browserHistory.push('/');
-      });
+    this.props.userCreate(this.state)
+      .then(data => console.log('done with action') );
   }
 
   render() {
-    
     return (
-
       <div className="row">
         <form onSubmit={this.handleSubmit.bind(this)} className="col s12 center-align">
         
@@ -78,8 +70,16 @@ class SignupPage extends React.Component {
 };
 
 SignupPage.propTypes = {
-  // userSignupRequest: React.PropTypes.func.isRequired,
-  // addFlashMessage: React.PropTypes.func.isRequired
+  cart: React.PropTypes.array.isRequired
 }
 
-export default SignupPage;
+function mapStateToProps(state) {
+  console.log('state from sign up')
+  console.log(state)
+  
+  return {
+    cart: state.cartReducer
+  }
+}
+
+export default connect(mapStateToProps, { userCreate })(SignupPage);
