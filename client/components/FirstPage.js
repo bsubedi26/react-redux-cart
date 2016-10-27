@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import { addToCart } from '../actions/productsAction';
 import { addCartAction } from '../actions/cartAction';
 
 class FirstPage extends React.Component {
@@ -51,7 +50,6 @@ class FirstPage extends React.Component {
 
 FirstPage.propTypes = {
   products: React.PropTypes.array.isRequired,
-  addToCart: React.PropTypes.func.isRequired,
   addCartAction: React.PropTypes.func.isRequired
   
 }
@@ -63,4 +61,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { addToCart, addCartAction })(FirstPage);
+export default connect(mapStateToProps, { addCartAction })(FirstPage);

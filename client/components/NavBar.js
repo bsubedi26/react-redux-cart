@@ -17,6 +17,7 @@ class NavBar extends React.Component {
                 <ul className="right hide-on-med-and-down">
                     <li><Link to="/"> Home </Link> </li>
                     <li><Link to="/checkout"> Shopping Cart </Link> </li>
+                    <li><Link to="/signup"> Sign Up </Link> </li>
                     <li><Link to="/checkout"> <i className="material-icons">shopping_cart</i> </Link> </li>
                     <li className="chip">
                         Total Items: {this.props.cart.length}
