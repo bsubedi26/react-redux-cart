@@ -25,7 +25,7 @@ router.post('/create', function(req, res) {
 
 // POST for user login
 router.post('/login', function(req, res) {
-    console.log(req.body)
+    console.log(req.session)
     const { username, password } = req.body.data;
 
     User.findOne({username: username}, function(err, user) {

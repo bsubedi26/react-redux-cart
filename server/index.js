@@ -1,7 +1,9 @@
 import express from 'express';
-var app = express();
+const app = express();
 import path from 'path';
 import bodyParser from 'body-parser';
+const session = require('express-session');
+
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 import webpack from 'webpack';
@@ -21,11 +23,16 @@ app.use(express.static(path.join(__dirname, '../public')))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 require('./config/db_config');
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 import users from './controllers/user';
 app.use('/api/users', users);
-
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 app.get('/', (req, res) => {
