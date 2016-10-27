@@ -17,9 +17,20 @@ export function userCreate(userData) {
             })
     }
 }
+
 export function login(userData) {
     console.log('login action triggered');
     return dispatch => {
         axios.post('/api/users/login', {data: userData})
+            .then(response => {
+                console.log('response', response)
+                dispatch({
+                    type: 'CREATE',
+                    response: response,
+                    isAuthenicated: true
+                })
+                browserHistory.push('/');
+                
+            })
     }
 }

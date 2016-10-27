@@ -25,7 +25,6 @@ class SignupPage extends React.Component {
     e.preventDefault();
     // ACTION TO CREATE USER
     this.props.userCreate(this.state)
-      .then(browserHistory.push('/login'));
   }
 
   render() {

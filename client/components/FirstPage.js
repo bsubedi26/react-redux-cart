@@ -55,8 +55,6 @@ FirstPage.propTypes = {
 }
 
 function mapStateToProps(state) {
-  console.log('************************')
-  console.log(state)
   return {
     products: state.storeReducer
   }
