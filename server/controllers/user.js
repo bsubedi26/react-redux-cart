@@ -23,6 +23,11 @@ router.post('/create', function(req, res) {
     })
 })
 
+router.get('/ajax', (req, res) => {
+    console.log('session id', req.session.id);
+    
+})
+
 // POST for user login
 router.post('/login', function(req, res) {
     console.log(req.session)
@@ -42,7 +47,8 @@ router.post('/login', function(req, res) {
                 if (err) throw err;
                 if (isMatch == true) {
                     console.log('right password')
-                    res.json(user)
+                    req.session._id = user._id;
+                    res.json(user);
 
                 }
             });

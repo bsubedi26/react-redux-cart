@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { addCartAction } from '../actions/cartAction';
+import axios from 'axios';
 
 class FirstPage extends React.Component {
   
@@ -19,11 +20,16 @@ class FirstPage extends React.Component {
     console.log(product)
   }
 
+  ajax(e) {
+    e.preventDefault();
+    axios.get('/api/users/ajax');
+  }
+
   render() {
 
     return (
       <div className="row">
-        
+        <button onClick={this.ajax.bind(this)} className="btn">AJAX Call</button>
         {this.props.products.map((product, i) => {
 
           return (

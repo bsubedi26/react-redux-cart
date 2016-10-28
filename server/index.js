@@ -3,7 +3,6 @@ const app = express();
 import path from 'path';
 import bodyParser from 'body-parser';
 const session = require('express-session');
-
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 import webpack from 'webpack';
@@ -19,15 +18,25 @@ app.use(webpackMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler));
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
+import knexConfig from './config/knex_file';
+import knex from 'knex';
+let bookshelf = require('bookshelf')(knexConfig);
+app.set('bookshelf', bookshelf);
+knex.schema.createTable('users', function(table) {
+  table.increments('id').primary();
+  table.string('name').notNullable();
+})
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
 app.use(express.static(path.join(__dirname, '../public')))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-require('./config/db_config');
+// require('./config/db_config');
 app.use(session({
-  secret: 'keyboard cat',
+  secret: 'secret-session',
   resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
+  saveUninitialized: false,
+  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
 }))
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
