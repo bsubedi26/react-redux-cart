@@ -1,11 +1,16 @@
-export default function userReducer(state = [], action = {}) {
+const initialState = {
+  isAuthenticated: false,
+  user: {}
+};
+
+export default function userReducer(state = initialState, action = {}) {
     switch (action.type) {
-        case 'LOGIN':
-            return [
-                ...state,
-                action.token,
-                action.isAuthenicated
-            ];
+        case 'SET_CURRENT_USER':
+            return {
+                isAuthenicated: action.isAuthenicated,
+                user: action.user,
+                token: action.token
+            };
          
         default: return state;
     }

@@ -1,14 +1,8 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
+import jwtDecode from 'jwt-decode';
 import setAuthorizationToken from '../auth/setAuthorizationToken';
 import { showMessage } from './flashMessages';
-
-export function setCurrentUser(user) {
-  return {
-    type: 'SET_CURRENT_USER',
-    user
-  };
-}
 
 export function userCreate(userData) {
   console.log('user create action triggered');
@@ -30,21 +24,23 @@ export function login(userData) {
             .then(response => {
          
                 if (response.data.error) {
-                    console.log(response.data.error)
                     dispatch(showMessage(response.data.error))
                 }
-                // console.log('token', response.data.token)
-                localStorage.setItem('token', response.data.token);
-                setAuthorizationToken(localStorage.token);
-                // store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
-         
-                dispatch({
-                    type: 'LOGIN',
-                    token: response.data.token,
-                    isAuthenicated: true
-                })
-                browserHistory.push('/');
-                
+                else {
+                    setAuthorizationToken(response.data.token);
+                    let userInfo = jwtDecode(response.data.token);
+                    dispatch(setCurrentUser(userInfo, response.data.token, true))
+                    browserHistory.push('/');
+                }
             })
     }
+}
+
+export function setCurrentUser(user, token, authenticated) {
+  return {
+    type: 'SET_CURRENT_USER',
+    user: user,
+    token: token,
+    isAuthenicated: authenticated
+  };
 }
