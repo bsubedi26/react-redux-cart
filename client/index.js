@@ -7,7 +7,6 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import allReducers from './reducers/index';
 import routes from './routes';
 import {persistStore, autoRehydrate} from 'redux-persist';
-import setAuthorizationToken from './auth/setAuthorizationToken';
 
 const store = createStore(
   allReducers,

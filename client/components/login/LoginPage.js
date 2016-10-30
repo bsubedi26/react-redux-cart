@@ -25,6 +25,7 @@ class LoginPage extends React.Component {
   }
 
   render() {
+    const { flashMessages } = this.props;
     return (
       <div className="row">
         <form onSubmit={this.handleSubmit.bind(this)} className="col s12 center-align">
@@ -39,6 +40,9 @@ class LoginPage extends React.Component {
               <label htmlFor="username">User Name</label>
             </div>
 
+            <span className="red-text">{flashMessages.length ? flashMessages[flashMessages.length - 1] : null}</span>
+            
+
           </div>
 
          <div className="row">
@@ -49,8 +53,7 @@ class LoginPage extends React.Component {
            </div>
            
          </div>
-
-          <button className="btn waves-effect waves-light light-green darken-3" type="submit" name="action">Submit</button>
+          <button className="btn btn-large waves-effect waves-light grey lighten-1 black-text btn-flat" type="submit" name="action">Submit</button>
           </div>
         </form>
       </div>
@@ -65,7 +68,8 @@ LoginPage.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    cart: state.cartReducer
+    cart: state.cartReducer,
+    flashMessages: state.flashMessagesReducer
   }
 }
 

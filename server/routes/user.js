@@ -27,7 +27,7 @@ router.post('/create', function(req, res) {
 })
 
 router.get('/ajax', authenticate, (req, res) => {
-    console.log('--------------------------');
+    console.log('-------------session-------------');
     // temporary route to check the session 
     console.log(req.session);
 })
@@ -35,20 +35,19 @@ router.get('/ajax', authenticate, (req, res) => {
 // POST for user login
 router.post('/login', function(req, res) {
     const { username, password } = req.body.data;
+
     User.findOne({username: username}, function(err, user) {
         if (err) throw err;
 
         if (!user) {
             console.log('no user found');
-            res.json({
-                response: 'No User Found'
-            })
+            res.json({ error: "Sorry, we don't recognize this username." });
         }
 
         if (user) {
             bcrypt.compare(password, user.password, function(err, isMatch) {
                 if (err) throw err;
-                if (isMatch == true) {
+                if (isMatch === true) {
                     console.log('right password');
                     // req.session._id = user._id;
                     const token = jwt.sign({
@@ -63,7 +62,7 @@ router.post('/login', function(req, res) {
                 else {
                     console.log('wrong password');
                     res.json({
-                        response: 'Invalid password'
+                        error: 'Sorry, the password does not match the username.'
                     })
                 }
             });

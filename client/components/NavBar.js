@@ -3,10 +3,11 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
 class NavBar extends React.Component {
+  
   constructor(props) {
     super(props)
   }
-
+  
   componentDidUpdate() {
       // console.log(this.props.user[0])
       
@@ -57,7 +58,7 @@ class NavBar extends React.Component {
     return (
         <div className="navbar-fixed">
           <nav>
-            <div className="nav-wrapper light-green lighten-1">
+            <div className="nav-wrapper light-green darken-1">
                 <Link to="/" className="brand-logo">React-Cart</Link>
 
                 { this.props.user[1] ? userLinks : guestLinks }

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 import setAuthorizationToken from '../auth/setAuthorizationToken';
+import { showMessage } from './flashMessages';
 
 export function setCurrentUser(user) {
   return {
@@ -18,7 +19,7 @@ export function userCreate(userData) {
         axios.post('/api/users/create', {data: userData})
             .then(response => { 
                 browserHistory.push('/login');
-            })
+        })
     }
 }
 
@@ -27,10 +28,16 @@ export function login(userData) {
     return dispatch => {
         axios.post('/api/users/login', {data: userData})
             .then(response => {
+         
+                if (response.data.error) {
+                    console.log(response.data.error)
+                    dispatch(showMessage(response.data.error))
+                }
                 // console.log('token', response.data.token)
                 localStorage.setItem('token', response.data.token);
                 setAuthorizationToken(localStorage.token);
                 // store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
+         
                 dispatch({
                     type: 'LOGIN',
                     token: response.data.token,
@@ -41,21 +48,3 @@ export function login(userData) {
             })
     }
 }
-
-// function receiveLogin(user) {
-//   return {
-//     type: LOGIN_SUCCESS,
-//     isFetching: false,
-//     isAuthenticated: true,
-//     id_token: user.id_token
-//   }
-// }
-
-// function loginError(message) {
-//   return {
-//     type: LOGIN_FAILURE,
-//     isFetching: false,
-//     isAuthenticated: false,
-//     message
-//   }
-// }

@@ -17,7 +17,7 @@ class FirstPage extends React.Component {
   }
 
   details(product) {
-    console.log(product)
+    // console.log(product)
   }
 
   ajax(e) {

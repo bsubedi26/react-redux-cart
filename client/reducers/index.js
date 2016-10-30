@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 import storeReducer from './products';
 import cartReducer from './cart';
 import usersReducer from './users';
-
+import flashMessagesReducer from './flashMessages';
 
 /*
  * We combine all reducers into a single object before updated data is dispatched (sent) to store
@@ -12,5 +12,6 @@ import usersReducer from './users';
 export default combineReducers({
     storeReducer,
     cartReducer,
-    usersReducer
+    usersReducer,
+    flashMessagesReducer
 });
