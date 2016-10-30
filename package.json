@@ -1,15 +1,14 @@
 {
-  "name": "react-server-connect",
+  "name": "react-redux-cart",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch server --exec babel-node -- server/index.js",
-    "migrate": "knex migrate:latest",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bibek Subedi",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -33,8 +32,6 @@
     "jsonwebtoken": "^7.1.9",
     "lodash": "^4.13.1",
     "mongoose": "^4.5.10",
-    "passport": "^0.3.2",
-    "passport-local": "^1.0.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",

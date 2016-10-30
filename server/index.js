@@ -4,8 +4,6 @@ import path from 'path';
 import bodyParser from 'body-parser';
 const session = require('express-session');
 const sessionStore = require('./config/db_config');
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
 //********************************MIDDLEWARES************************************
 import { webpackSetting, webpackLoading } from './webpack_compiler';
 app.use(webpackSetting);
@@ -25,8 +23,6 @@ app.use(session(sessionOptions));
 //********************************ROUTES************************************
 import users from './routes/user';
 app.use('/api/users', users);
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'));
