@@ -7,12 +7,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import allReducers from './reducers/index';
 import routes from './routes';
 import {persistStore, autoRehydrate} from 'redux-persist';
+import setAuthorizationToken from './auth/setAuthorizationToken';
 
-// const rewriteState = {
-//   products: [{
-//     id: '1'
-//   }]
-// }
 const store = createStore(
   allReducers,
   compose(
@@ -22,8 +18,6 @@ const store = createStore(
   // autoRehydrate()
 );
 // persistStore(store)
-
-// console.log(store.getState())
 
 render(
   <Provider store={store}>

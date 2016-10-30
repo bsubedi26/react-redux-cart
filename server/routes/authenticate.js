@@ -4,6 +4,7 @@ import User from '../models/user';
 
 // AUTHENTICATION middleware to use in other routes that need authentication
 export default (req, res, next) => {
+    console.log('authenticate middleware triggered');
     const authorizationHeader = req.headers['authorization'];
     let token;
 

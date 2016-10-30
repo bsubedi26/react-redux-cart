@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
+import setAuthorizationToken from '../auth/setAuthorizationToken';
 
 export function setCurrentUser(user) {
   return {
@@ -26,10 +27,13 @@ export function login(userData) {
     return dispatch => {
         axios.post('/api/users/login', {data: userData})
             .then(response => {
-                console.log('response', response)
+                // console.log('token', response.data.token)
+                localStorage.setItem('token', response.data.token);
+                setAuthorizationToken(localStorage.token);
+                // store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
                 dispatch({
                     type: 'LOGIN',
-                    response: response,
+                    token: response.data.token,
                     isAuthenicated: true
                 })
                 browserHistory.push('/');

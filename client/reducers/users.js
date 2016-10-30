@@ -3,7 +3,7 @@ export default function userReducer(state = [], action = {}) {
         case 'LOGIN':
             return [
                 ...state,
-                action.response.data,
+                action.token,
                 action.isAuthenicated
             ];
          

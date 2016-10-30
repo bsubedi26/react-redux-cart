@@ -8,7 +8,7 @@ class NavBar extends React.Component {
   }
 
   componentDidUpdate() {
-      console.log(this.props.user[0])
+      // console.log(this.props.user[0])
       
   }
   render() {

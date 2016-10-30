@@ -5,6 +5,7 @@ import bcrypt from 'bcryptjs';
 const router = express.Router();
 import jwt from 'jsonwebtoken';
 import jwtConfig from '../config/jwt_config';
+import authenticate from './authenticate';
 
 //********************************ROUTES************************************
 // POST for creating a new user
@@ -25,7 +26,7 @@ router.post('/create', function(req, res) {
     })
 })
 
-router.get('/ajax', (req, res) => {
+router.get('/ajax', authenticate, (req, res) => {
     console.log('--------------------------');
     // temporary route to check the session 
     console.log(req.session);
@@ -33,8 +34,6 @@ router.get('/ajax', (req, res) => {
 
 // POST for user login
 router.post('/login', function(req, res) {
-    // console.log('session', req.session);
-    console.log(req.headers);
     const { username, password } = req.body.data;
     User.findOne({username: username}, function(err, user) {
         if (err) throw err;
