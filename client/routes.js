@@ -6,6 +6,7 @@ import SignupPage from './components/signup/SignupPage';
 import LoginPage from './components/login/LoginPage';
 import ProductDetail from './components/ProductDetail';
 import Checkout from './components/Checkout';
+import HOC from './components/HOC';
 
 export default (
     <Route path="/" component={App}>
@@ -14,6 +15,8 @@ export default (
         <Route path="login" component={LoginPage} />
         <Route path="checkout" component={Checkout} />
         <Route path="detail/:id" component={ProductDetail} />
+        <Route path="hoc" component={HOC} />
+        
         
     </Route>
 )

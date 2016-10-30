@@ -36,6 +36,7 @@ class NavBar extends React.Component {
     const guestLinks = (
       <ul className="right hide-on-med-and-down">
           <li><Link to="/"> Home </Link> </li>
+          <li><Link to="/hoc">HOC</Link> </li>
           <li><Link to="/checkout"> Shopping Cart </Link> </li>
           <li><Link to="/login"> Login </Link> </li>
           <li><Link to="/signup"> Sign Up </Link> </li>

@@ -6,11 +6,12 @@ const UserSchema = new Schema({
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     email: { type: String, required: true },
-    created_at: Date,
+    created_at: { type : Date, default: new Date() },
     updated_at: Date
 });
 
-// hash incoming password before saving to db
+//********************************PRE/METHODS*************************************
+// pre save - hash incoming password before saving to db
 UserSchema.pre('save', function(next) {
     const user = this;
 
@@ -39,6 +40,7 @@ UserSchema.methods.comparePassword = function(candidatePassword, cb) {
     });
 };
 
+//********************************END PRE/METHODS*********************************
 const User = mongoose.model('User', UserSchema);
 
 export default User;

@@ -6,6 +6,7 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
 import allReducers from './reducers/index';
 import routes from './routes';
+import {persistStore, autoRehydrate} from 'redux-persist';
 
 // const rewriteState = {
 //   products: [{
@@ -17,8 +18,10 @@ const store = createStore(
   compose(
     applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
-  )
+  ),
+  // autoRehydrate()
 );
+// persistStore(store)
 
 // console.log(store.getState())
 
