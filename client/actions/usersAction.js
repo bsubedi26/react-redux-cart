@@ -46,3 +46,11 @@ export function setCurrentUser(user, token, authenticated) {
     isAuthenticated: authenticated
   };
 }
+
+export function logout() {
+    return dispatch => {
+        dispatch(setCurrentUser({}, null, false));
+        setAuthorizationToken(false);
+        browserHistory.push('/');
+    }
+}

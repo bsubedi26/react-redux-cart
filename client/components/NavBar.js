@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
+import { logout } from '../actions/usersAction';
 
 class NavBar extends React.Component {
   
@@ -9,9 +10,15 @@ class NavBar extends React.Component {
   }
   
   componentDidUpdate() {
-      // console.log(this.props.user[0])
-      
+      // console.log(this.props.user.user)
   }
+  
+  logout(e) {
+    e.preventDefault();
+    console.log('click')
+    this.props.logout()
+  }
+
   render() {
     const { user } = this.props;
 
@@ -20,7 +27,7 @@ class NavBar extends React.Component {
           <li><Link to="/"> Home </Link> </li>
           <li><Link to="/"> {user.user.username} </Link> </li>
           <li><Link to="/checkout"> Shopping Cart </Link> </li>
-          <li><Link to="/logout"> Logout </Link> </li>
+          <li onClick={this.logout.bind(this)}><Link to=""> Logout </Link> </li>
           <li><Link to="/checkout"> <i className="material-icons">shopping_cart</i> </Link> </li>
           <li className="chip">
               Total Items: {this.props.cart.length}
@@ -79,11 +86,10 @@ NavBar.propTypes = {
 }
 
 function mapStateToProps(state) {
-  console.log(state)
   return {
     cart: state.cartReducer,
     user: state.usersReducer
   }
 }
 
-export default connect(mapStateToProps, null)(NavBar);
+export default connect(mapStateToProps, { logout })(NavBar);

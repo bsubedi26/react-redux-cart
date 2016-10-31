@@ -14,9 +14,9 @@ const store = createStore(
     applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   ),
-  // autoRehydrate()
+  autoRehydrate()
 );
-// persistStore(store)
+persistStore(store)
 
 render(
   <Provider store={store}>
