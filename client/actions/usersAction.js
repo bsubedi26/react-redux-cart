@@ -7,13 +7,11 @@ import { showMessage } from './flashMessages';
 export function userCreate(userData) {
   console.log('user create action triggered');
     return (dispatch, state) => {
-        // console.log(Object.keys(Object.getPrototypeOf(state)))
-        // console.log(state())
-
+        // POST request for creating new user
         axios.post('/api/users/create', {data: userData})
             .then(response => { 
                 browserHistory.push('/login');
-        })
+        }).catch( (err) => {console.log("Error: " + err)});
     }
 }
 
@@ -34,7 +32,7 @@ export function login(userData) {
                     dispatch(setCurrentUser(userInfo, response.data.token, true))
                     browserHistory.push('/');
                 }
-            })
+            }).catch( (err) => {console.log("Error: " + err)});
     }
 }
 
