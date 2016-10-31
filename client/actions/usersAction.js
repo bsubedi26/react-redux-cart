@@ -27,7 +27,9 @@ export function login(userData) {
                     dispatch(showMessage(response.data.error))
                 }
                 else {
+                    // set the jwt token in the request header for the server to authenticate user
                     setAuthorizationToken(response.data.token);
+                    // decode the jwt token which has the user information sent from the server
                     let userInfo = jwtDecode(response.data.token);
                     dispatch(setCurrentUser(userInfo, response.data.token, true))
                     browserHistory.push('/');
@@ -41,6 +43,6 @@ export function setCurrentUser(user, token, authenticated) {
     type: 'SET_CURRENT_USER',
     user: user,
     token: token,
-    isAuthenicated: authenticated
+    isAuthenticated: authenticated
   };
 }

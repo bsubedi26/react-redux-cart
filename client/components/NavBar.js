@@ -13,11 +13,12 @@ class NavBar extends React.Component {
       
   }
   render() {
-    
+    const { user } = this.props;
+
     const userLinks = (
       <ul className="right hide-on-med-and-down">
           <li><Link to="/"> Home </Link> </li>
-          <li><Link to="/"> {this.props.user[1] ? this.props.user[0].username : null} </Link> </li>
+          <li><Link to="/"> {user.user.username} </Link> </li>
           <li><Link to="/checkout"> Shopping Cart </Link> </li>
           <li><Link to="/logout"> Logout </Link> </li>
           <li><Link to="/checkout"> <i className="material-icons">shopping_cart</i> </Link> </li>
@@ -61,7 +62,7 @@ class NavBar extends React.Component {
             <div className="nav-wrapper light-green darken-1">
                 <Link to="/" className="brand-logo">React-Cart</Link>
 
-                { this.props.user[1] ? userLinks : guestLinks }
+                { user.user.username ? userLinks : guestLinks }
 
                 
 
@@ -78,6 +79,7 @@ NavBar.propTypes = {
 }
 
 function mapStateToProps(state) {
+  console.log(state)
   return {
     cart: state.cartReducer,
     user: state.usersReducer

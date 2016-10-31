@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import { userCreate } from '../../actions/usersAction';
+import { userCreate } from '../actions/usersAction';
 
 class SignupPage extends React.Component {
   constructor(props) {

@@ -7,7 +7,7 @@ export default function userReducer(state = initialState, action = {}) {
     switch (action.type) {
         case 'SET_CURRENT_USER':
             return {
-                isAuthenicated: action.isAuthenicated,
+                isAuthenticated: action.isAuthenticated,
                 user: action.user,
                 token: action.token
             };
