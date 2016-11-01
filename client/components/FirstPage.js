@@ -20,16 +20,10 @@ class FirstPage extends React.Component {
     // console.log(product)
   }
 
-  ajax(e) {
-    e.preventDefault();
-    axios.get('/api/users/ajax');
-  }
-
   render() {
 
     return (
       <div className="row">
-        <button onClick={this.ajax.bind(this)} className="btn">AJAX Call</button>
         {this.props.products.map((product, i) => {
 
           return (

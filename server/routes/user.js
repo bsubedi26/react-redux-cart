@@ -26,12 +26,6 @@ router.post('/create', function(req, res) {
     })
 })
 
-router.get('/ajax', authenticate, (req, res) => {
-    console.log('-------------session-------------');
-    // temporary route to check the session 
-    console.log(req.session);
-})
-
 // POST for user login
 router.post('/login', function(req, res) {
     const { username, password } = req.body.data;
@@ -69,4 +63,12 @@ router.post('/login', function(req, res) {
         }
     })
 })
+
+// temporary route to check user auth 
+router.get('/check-auth', authenticate, (req, res) => {
+    console.log('-------------session-------------');
+    // temporary route to check the session 
+    console.log(req.session);
+})
+
 export default router;
