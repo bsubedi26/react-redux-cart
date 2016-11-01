@@ -36,7 +36,8 @@ class LoginPage extends React.Component {
         <form onSubmit={this.handleSubmit.bind(this)} className="col s12 center-align">
         
         <div className="card-panel">
-        <h4 className="center-align card-panel blue-grey-text" style={{fontFamily: 'Comic Sans MS'}}>Sign In Below:</h4>
+        <h4 className="center-align card-panel blue-grey-text"
+        style={{fontFamily: 'Comic Sans MS'}}>Login to access this page!</h4>
           
           <div className="row">
             <div className="input-field col s12">

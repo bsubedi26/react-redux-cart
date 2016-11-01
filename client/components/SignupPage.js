@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import { browserHistory } from 'react-router';
 import { userCreate } from '../actions/usersAction';
 
@@ -31,8 +32,9 @@ class SignupPage extends React.Component {
       <div className="row">
         <form onSubmit={this.handleSubmit.bind(this)} className="col s12 center-align">
         
+
         <div className="card-panel">
-        <h3 className="center-align">Create an Account</h3>
+        <h4 className="center-align card-panel blue-grey-text" style={{fontFamily: 'Comic Sans MS'}}>Register for an account below:</h4>
           
           <div className="row">
             <div className="input-field col s6">
@@ -61,6 +63,8 @@ class SignupPage extends React.Component {
          </div>
 
           <button className="btn waves-effect waves-light light-green darken-3" type="submit" name="action">Submit</button>
+          <br />
+          <span className="">Already have an account? Login <Link to="/login">here</Link></span>
           </div>
         </form>
       </div>

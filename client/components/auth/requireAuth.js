@@ -7,13 +7,13 @@ export default function BaseComponent(PassedComponent) {
 
         componentWillMount() {
             if (this.props.isAuthenticated === false) {
-                browserHistory.push('/login')
+                browserHistory.push('/login-auth')
             }
         }
 
         componentWillUpdate(nextProps) {
             if (nextProps.isAuthenticated === false) {
-                browserHistory.push('/login')
+                browserHistory.push('/login-auth')
             }
         }
 
