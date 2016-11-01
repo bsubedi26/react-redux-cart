@@ -5,3 +5,10 @@ export function showMessage(message) {
         message
     }
 }
+
+export function removeMessages() {
+    // console.log('remove message action triggered');
+    return {
+        type: 'REMOVE'
+    }
+}

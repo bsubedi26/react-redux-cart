@@ -7,7 +7,7 @@ import LoginPage from './components/LoginPage';
 import ProductDetail from './components/ProductDetail';
 import Checkout from './components/Checkout';
 import HOC from './components/HOC';
-import requireAuth from './components/HOC/requireAuth';
+import requireAuth from './components/auth/requireAuth';
 
 export default (
     <Route path="/" component={App}>

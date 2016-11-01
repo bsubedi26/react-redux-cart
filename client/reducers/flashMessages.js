@@ -7,9 +7,11 @@ export default function flashMessagesReducer(state = [], action = {}) {
                 action.message
             ];
 
+        case 'REMOVE':
+            // remove all the flash messages 
+            return state.filter(message => !message)  
+
         default: return state;
     }
 }
 
-
-   

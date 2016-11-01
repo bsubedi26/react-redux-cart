@@ -3,6 +3,7 @@ var axios = require('axios');
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import { login } from '../actions/usersAction';
+import { removeMessages } from '../actions/flashMessages';
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -22,6 +23,11 @@ class LoginPage extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.login(this.state);
+  }
+
+  componentWillUnmount() {
+    // remove flash messages when component is unmounted
+    this.props.removeMessages()
   }
 
   render() {
@@ -63,14 +69,16 @@ class LoginPage extends React.Component {
 
 LoginPage.propTypes = {
   cart: React.PropTypes.array.isRequired,
-  login: React.PropTypes.func.isRequired
+  login: React.PropTypes.func.isRequired,
+  removeMessages: React.PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
+  console.log(state)
   return {
     cart: state.cartReducer,
     flashMessages: state.flashMessagesReducer
   }
 }
 
-export default connect(mapStateToProps, { login })(LoginPage);
+export default connect(mapStateToProps, { login, removeMessages })(LoginPage);

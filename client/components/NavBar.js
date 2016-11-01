@@ -9,14 +9,9 @@ class NavBar extends React.Component {
     super(props)
   }
   
-  componentDidUpdate() {
-      // console.log(this.props.user.user)
-  }
-  
   logout(e) {
     e.preventDefault();
-    console.log('click')
-    this.props.logout()
+    this.props.logout();
   }
 
   render() {
@@ -70,8 +65,6 @@ class NavBar extends React.Component {
                 <Link to="/" className="brand-logo">React-Cart</Link>
 
                 { user.user.username ? userLinks : guestLinks }
-
-                
 
             </div>
           </nav>

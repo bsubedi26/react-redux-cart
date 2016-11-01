@@ -22,6 +22,7 @@ export function login(userData) {
             .then(response => {
          
                 if (response.data.error) {
+                    // if error in response then display error
                     dispatch(showMessage(response.data.error))
                 }
                 else {

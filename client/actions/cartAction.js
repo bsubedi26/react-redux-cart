@@ -7,7 +7,6 @@ export function addCartAction(product) {
 }
 
 export function removeFromCart(product) {
-    console.log('remove cart triggered')
     return {
         type: 'REMOVE',
         product
