@@ -16,7 +16,7 @@ export default (
         <Route path="signup" component={SignupPage} />
         <Route path="login" component={LoginPage} />
         <Route path="login-auth" component={LoginPageAuth} />
-        <Route path="checkout" component={requireAuth(Checkout)} />
+        <Route path="checkout" component={Checkout} />
         <Route path="detail/:id" component={ProductDetail} />
         <Route path="hoc" component={HOC} />
         

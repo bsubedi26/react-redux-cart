@@ -1,14 +1,14 @@
-export function addCartAction(product) {
-    console.log('cart action triggered')
+export function addCartAction(product, quantity) {
     return {
-        type: 'ADD',
-        product
+        type: 'CART_ADD',
+        product,
+        quantity
     }
 }
 
 export function removeFromCart(product) {
     return {
-        type: 'REMOVE',
+        type: 'CART_REMOVE',
         product
     }
 }

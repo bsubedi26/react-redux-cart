@@ -7,16 +7,18 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import allReducers from './reducers/index';
 import routes from './routes';
 import {persistStore, autoRehydrate} from 'redux-persist';
+import logger from 'redux-logger'
 
 const store = createStore(
   allReducers,
   compose(
     applyMiddleware(thunk),
+    applyMiddleware(logger),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   ),
-  autoRehydrate()
+  // autoRehydrate()
 );
-persistStore(store)
+// persistStore(store)
 
 render(
   <Provider store={store}>

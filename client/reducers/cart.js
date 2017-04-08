@@ -1,13 +1,16 @@
+
 export default function cartReducer(state = [], action = {}) {
     switch (action.type) {
-        case 'ADD':
-            console.log('cart state', state)
+        case 'CART_ADD':
+            let addProduct = Object.assign({}, action.product)
+            addProduct.quantity = action.quantity
+            addProduct.price = (parseInt(addProduct.price) * parseInt(addProduct.quantity)).toFixed(2)
             return [
                 ...state,
-                action.product
+                addProduct
             ];
 
-        case 'REMOVE':
+        case 'CART_REMOVE':
             //  return a new array excluding the product that needs to be removed
             let index = state.findIndex((product) => product.id === action.product.id); 
             return [

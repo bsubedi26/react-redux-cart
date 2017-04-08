@@ -16,6 +16,7 @@ class NavBar extends React.Component {
 
   render() {
     const { user } = this.props;
+    console.log('tt', this.props)
 
     const userLinks = (
       <ul className="right hide-on-med-and-down">
@@ -28,7 +29,7 @@ class NavBar extends React.Component {
               Total Items: {this.props.cart.length}
               <br />
               Total Cost: {this.props.cart.reduce((total, item) => {
-                  total += item.price;
+                  total += parseInt(item.price);
                   var truncated = Math.floor(total * 100) / 100;
                   return truncated;
               }, 0)}
@@ -46,12 +47,15 @@ class NavBar extends React.Component {
           <li><Link to="/signup"> Sign Up </Link> </li>
           <li><Link to="/checkout"> <i className="material-icons">shopping_cart</i> </Link> </li>
           <li className="chip">
-              Total Items: {this.props.cart.length}
+              Total Items: {this.props.cart.reduce((total, item) => {
+                  total += parseInt(item.quantity);
+                  return total
+              }, 0)}
               <br />
-              Total Cost: {this.props.cart.reduce((total, item) => {
-                  total += item.price;
+              Total Cost: ${this.props.cart.reduce((total, item) => {
+                  total += parseInt(item.price);
                   var truncated = Math.floor(total * 100) / 100;
-                  return truncated;
+                  return truncated
               }, 0)}
           </li>
       </ul>
@@ -61,7 +65,8 @@ class NavBar extends React.Component {
     return (
         <div className="navbar-fixed">
           <nav>
-            <div className="nav-wrapper light-green darken-1">
+            <div className="nav-wrapper light-blue darken-1">
+
                 <Link to="/" className="brand-logo">React-Cart</Link>
 
                 { user.user.username ? userLinks : guestLinks }

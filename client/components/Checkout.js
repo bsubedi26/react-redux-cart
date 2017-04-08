@@ -21,13 +21,12 @@ class Checkout extends React.Component {
   render() {
     return (
         <div>
-            
             <table className="highlight centered">
                 <thead>
                     <tr>
-                        <th>Item #</th>
+                        <th>Quantity Amount</th>
                         <th>Product Name</th>
-                        <th>Product Price</th>
+                        <th>Total Price</th>
                         <th>Product Image</th>
                     </tr>
                 </thead>
@@ -36,7 +35,7 @@ class Checkout extends React.Component {
                 {this.props.cart.map((product, i) => {
                     return (
                         <tr key={i}>
-                            <td>{product.id}</td>
+                            <td>{product.quantity}</td>
                             <td>{product.name}</td>
                             <td>{product.price}</td>
                             <td><img src={product.src} width="100" height="100" /></td>
@@ -50,7 +49,7 @@ class Checkout extends React.Component {
                         <td></td>
                         <td><strong>
                             ${this.props.cart.reduce((total, item) => {
-                                total += item.price;
+                                total += parseInt(item.price);
                                 var truncated = Math.floor(total * 100) / 100;
                                 return truncated;
                             }, 0)}

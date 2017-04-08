@@ -1,7 +1,7 @@
 export function showMessage(message) {
     // console.log('show message action triggered');
     return {
-        type: 'SHOW',
+        type: 'FLASH_MESSAGE_SHOW',
         message
     }
 }
@@ -9,6 +9,6 @@ export function showMessage(message) {
 export function removeMessages() {
     // console.log('remove message action triggered');
     return {
-        type: 'REMOVE'
+        type: 'FLASH_MESSAGE_REMOVE'
     }
 }
