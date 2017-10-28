@@ -11,15 +11,15 @@ app.use(webpackLoading);
 app.use(express.static(path.join(__dirname, '../public')))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-const sessionOptions = {
-  secret: 'super_secret_session',
-  resave: false,
-  // Setting true will ensure the sessions are saved
-  saveUninitialized: true,
-  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 }, // 30 days
-  store: sessionStore
-}
-app.use(session(sessionOptions));
+// const sessionOptions = {
+//   secret: 'super_secret_session',
+//   resave: false,
+//   // Setting true will ensure the sessions are saved
+//   saveUninitialized: true,
+//   cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 }, // 30 days
+//   store: sessionStore
+// }
+// app.use(session(sessionOptions));
 //********************************ROUTES************************************
 import users from './routes/user';
 app.use('/api/users', users);

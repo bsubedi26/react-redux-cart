@@ -1,8 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { login } from '../actions/usersAction';
-import { removeMessages } from '../actions/flashMessages';
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -21,12 +20,12 @@ class LoginPage extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state);
+    // this.props.login(this.state);
   }
 
   componentWillUnmount() {
     // remove flash messages when component is unmounted
-    this.props.removeMessages()
+    // this.props.removeMessages()
   }
 
   render() {
@@ -70,9 +69,9 @@ class LoginPage extends React.Component {
 };
 
 LoginPage.propTypes = {
-  cart: React.PropTypes.array.isRequired,
-  login: React.PropTypes.func.isRequired,
-  removeMessages: React.PropTypes.func.isRequired
+  cart: PropTypes.array.isRequired,
+  // login: PropTypes.func.isRequired,
+  // removeMessages: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
@@ -82,4 +81,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { login, removeMessages })(LoginPage);
+export default connect(mapStateToProps, {})(LoginPage);

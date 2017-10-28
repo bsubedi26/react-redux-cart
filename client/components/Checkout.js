@@ -1,17 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import { removeFromCart } from '../actions/cartAction';
+import { totalCost, removeFromCart, getTotalPerItem } from '../reducers/cart';
 
 class Checkout extends React.Component {
  
-  componentDidMount() {
-      console.log(this.props.cart)
+  removeProduct(product) {
+      this.props.removeFromCart(product)
   }
 
-  removeProduct(product) {
-      console.log(product)
-      this.props.removeFromCart(product)
+  componentDidMount() {
+    console.log(this.props.getTotalPerItem)
   }
 
   checkout() {
@@ -32,7 +32,7 @@ class Checkout extends React.Component {
                 </thead>
 
                 <tbody>
-                {this.props.cart.map((product, i) => {
+                {this.props.getTotalPerItem.map((product, i) => {
                     return (
                         <tr key={i}>
                             <td>{product.quantity}</td>
@@ -46,13 +46,10 @@ class Checkout extends React.Component {
 
                     <tr>
                         <td></td>
-                        <td></td>
+                        <td>
+                        </td>
                         <td><strong>
-                            ${this.props.cart.reduce((total, item) => {
-                                total += parseInt(item.price);
-                                var truncated = Math.floor(total * 100) / 100;
-                                return truncated;
-                            }, 0)}
+                            ${this.props.totalCost}
                         </strong></td>
                         <td><button onClick={this.checkout.bind(this)} className="btn waves-effect waves-light brown lighten-2">Checkout</button></td>
                     </tr>
@@ -66,13 +63,15 @@ class Checkout extends React.Component {
 };
 
 Checkout.propTypes = {
-  cart: React.PropTypes.array.isRequired,
-  removeFromCart: React.PropTypes.func.isRequired
+  cart: PropTypes.array.isRequired,
+  removeFromCart: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
   return {
-    cart: state.cartReducer
+    cart: state.cartReducer,
+    totalCost: totalCost(state),
+    getTotalPerItem: getTotalPerItem(state)
   }
 }
 

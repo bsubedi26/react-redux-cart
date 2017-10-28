@@ -1,15 +1,8 @@
-import { PRODUCTS } from '../PRODUCTS';
+import { PRODUCTS } from './data/PRODUCTS';
 
 export default function productReducer(state = PRODUCTS, action = {}) {
     switch (action.type) {
-        case 'PRODUCT_ADD':
-            return [
-                ...state
-            ];
          
         default: return state;
     }
 }
-
-
-   

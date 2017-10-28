@@ -1,7 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import { addCartAction } from '../actions/cartAction';
+import { addCartAction } from '../reducers/cart';
 import axios from 'axios';
 
 class FirstPage extends Component {
@@ -14,10 +15,8 @@ class FirstPage extends Component {
   }
 
   addCart(product) {
-    // console.log(product)
     let q = this.state.quantity
     this.props.addCartAction(product, q)
-    
   }
 
   details(product) {
@@ -28,7 +27,6 @@ class FirstPage extends Component {
     var obj = {};
     obj[event.target.id] = event.target.value;
     this.setState(obj);
-    console.log(this.state)
   }
 
   render() {
@@ -70,8 +68,8 @@ class FirstPage extends Component {
 };
 
 FirstPage.propTypes = {
-  products: React.PropTypes.array.isRequired,
-  addCartAction: React.PropTypes.func.isRequired
+  products: PropTypes.array.isRequired,
+  addCartAction: PropTypes.func.isRequired
   
 }
 

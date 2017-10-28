@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { browserHistory } from 'react-router';
@@ -73,7 +74,7 @@ class SignupPage extends React.Component {
 };
 
 SignupPage.propTypes = {
-  cart: React.PropTypes.array.isRequired
+  cart: PropTypes.array.isRequired
 }
 
 function mapStateToProps(state) {

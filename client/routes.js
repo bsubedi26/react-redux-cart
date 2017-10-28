@@ -19,6 +19,5 @@ export default (
         <Route path="checkout" component={Checkout} />
         <Route path="detail/:id" component={ProductDetail} />
         <Route path="hoc" component={HOC} />
-        
     </Route>
 )

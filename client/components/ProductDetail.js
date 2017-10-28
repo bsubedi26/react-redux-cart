@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import { addCartAction } from '../actions/cartAction';
+import { addCartAction } from '../reducers/cart';
 
 class ProductDetail extends React.Component {
  
   componentWillMount() {
-      console.log(this.props.params.id)
+      console.log(this.props)
 
       this.props.products.forEach(product => {
           if (product.id == this.props.params.id) {
@@ -20,7 +20,7 @@ class ProductDetail extends React.Component {
   }
 
   addCart() {
-    this.props.addCartAction(this.state.product)
+    this.props.addCartAction(this.state.product, 1)
   }
 
   render() {
@@ -51,13 +51,13 @@ class ProductDetail extends React.Component {
 };
 
 ProductDetail.propTypes = {
-  products: React.PropTypes.array.isRequired,
-  addCartAction: React.PropTypes.func.isRequired
+//   products: React.PropTypes.array.isRequired,
+//   addCartAction: React.PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
   return {
-    products: state.storeReducer
+    products: state.productReducer
   }
 }
 
