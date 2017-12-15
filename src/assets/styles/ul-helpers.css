@@ -1,0 +1,21 @@
+.ul-style-none {
+    list-style: none;
+}
+
+.ul-sub-routes li {
+    display: inline-block;
+    border: 1px solid transparent;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--bre-red);
+    /* padding: 6px 12px; */
+    padding: 10px;
+    font-size: .725rem;
+    cursor: pointer;
+    letter-spacing: 0.08125rem;
+}
+
+.ul-sub-routes li:hover {
+    color: var(--bre-gray);
+    transition: color .5s;
+}
