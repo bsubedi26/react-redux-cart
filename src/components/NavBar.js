@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { totalItemsInCart, totalCost } from '../reducers/cart';
+import { SlideInLeft } from 'animate-css-styled-components';
 
 class NavBar extends React.Component {
   state = {
@@ -12,9 +13,9 @@ class NavBar extends React.Component {
     ]
   }
 
-  logout(e) {
-    e.preventDefault();
-    // this.props.logout();
+  handleSearchClick = (e) => {
+    e.preventDefault()
+    console.log('cl')
   }
 
   render() {
@@ -36,8 +37,9 @@ class NavBar extends React.Component {
             <li className="mx-2">CUSTOMER SERVICE</li>
           </ul>
         </div>
-        <div className="p-1 nav-right-side">
-          <i className="fa fa-search" aria-hidden="true"></i>
+        
+        <div onClick={this.handleSearchClick} className="p-1 nav-right-side">
+            <i className="fa fa-search" aria-hidden="true"></i>
         </div>
 
       </nav>
@@ -51,7 +53,7 @@ NavBar.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    cart: state.cartReducer,
+    cart: state.cart,
     totalItemsInCart: totalItemsInCart(state),
     totalCost: totalCost(state)
   }

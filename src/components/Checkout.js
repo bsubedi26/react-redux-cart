@@ -68,7 +68,7 @@ Checkout.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    cart: state.cartReducer,
+    cart: state.cart,
     totalCost: totalCost(state),
     getTotalPerItem: getTotalPerItem(state)
   }

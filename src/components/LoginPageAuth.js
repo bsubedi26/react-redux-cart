@@ -76,8 +76,7 @@ LoginPage.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    cart: state.cartReducer,
-    flashMessages: state.flashMessagesReducer
+    cart: state.cart,
   }
 }
 

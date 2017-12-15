@@ -78,7 +78,7 @@ SignupPage.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    cart: state.cartReducer
+    cart: state.cart
   }
 }
 

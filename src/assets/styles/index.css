@@ -1,96 +1,27 @@
-@import url("./color-helpers.css");
-@import url("./flex-helpers.css");
-@import url("./ul-helpers.css");
+@import url("./helpers/color-helpers.css");
+@import url("./helpers/flex-helpers.css");
+@import url("./helpers/ul-helpers.css");
+@import url("./helpers/border-helpers.css");
+@import url("./product.css");
+@import url("./nav.css");
 
-.card-panel {
-    padding: 30px;
-}
 img {
     padding-top: 10px;
-}
-.brand-logo {
-    font-family: 'Pacifico', Helvetica, sans-serif;
-    font-size: 26px;
-    text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
-    color: white;
 }
 .padding-left-20 {
     padding-left: 20px;
 }
-
 body {
   margin: 0;
   padding: 0;
-  /* font-family: sans-serif; */
 }
 
-
-
-.nav-contain {
-  /* border: 1px gold solid; */
-  height: 40px;
-  background-color: var(--light-gray);
-}
-
-.nav-contain ul {
-    list-style: none;
-}
-.nav-contain ul li {
-    display: inline-block;
-    /* padding: 15px 6px; */
-    text-transform: uppercase;
-    font-size: 0.65rem;
+.pointer {
     cursor: pointer;
 }
 
-.nav-left-side li {
-    color: var(--bre-red);
-}
-
-.nav-left-side li:hover {
-    color: var(--bre-gray);
-    transition: color .5s;
-}
-
-.nav-middle-side li {
-    color: var(--bre-gray);
-}
-.nav-middle-side li:hover {
-    color: var(--bre-red);
-    transition: color .5s;
-}
-
-.nav-right-side {
+.btn-add-cart {
     background-color: var(--bre-red);
     color: white;
-    padding: 1.2rem;
-    cursor: pointer;
-    width: 40px;
-    text-align: center;
-}
-
-.nav-right-side:hover {
-    background-color: white;
-    transition: background-color .5s;
-}
-
-.nav-right-side:hover i {
-    color: var(--bre-red);
-    transition: color .5s;
-}
-
-
-.top-title {
-    font-family: "Agenda Light",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    color: black;
-    letter-spacing: 0.25rem;
-    border-bottom: 1px solid #ebebeb;
-    padding: 20px;
-}
-
-.product-contain {
-    border: 2px solid gold;
+    border-radius: 0px !important;
 }

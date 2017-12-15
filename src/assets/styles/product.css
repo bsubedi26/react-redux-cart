@@ -1,0 +1,43 @@
+.top-title {
+    font-family: "Agenda Light",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: black;
+    letter-spacing: 0.25rem;
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px;
+}
+
+.top-image {
+    /* border: 2x red solid; */
+    /* background-image: url("//cdn.shopify.com/s/files/1/0985/9080/t/12/assets/homepage_hero_image_1.jpg?3225173906714521792"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 0%;
+}
+
+.product-title {
+    display: block;
+    color: #000;
+    font-size: 0.6rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.product-price {
+    display: block;
+    font-family: "Agenda Light",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-align: center;
+    color: #666;
+}
+
+.detail-description {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}

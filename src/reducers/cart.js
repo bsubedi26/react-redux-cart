@@ -16,14 +16,14 @@ export function removeFromCart(product) {
 
 // ************************** SELECTORS ************************** //
 export const totalItemsInCart = (state) => {
-    return state.cartReducer.reduce((total, item) => {
+    return state.cart.reduce((total, item) => {
         total += parseInt(item.quantity, 10);
         return total
     }, 0)
 }
 
 export const totalCost = (state) => {
-    return state.cartReducer.reduce((total, item) => {
+    return state.cart.reduce((total, item) => {
         total += parseInt(item.price, 10);
         const truncated = Math.floor(total * 100) / 100;
         return truncated
@@ -32,7 +32,7 @@ export const totalCost = (state) => {
 
 export const getTotalPerItem = (state) => {
     const map = new Map()
-    state.cartReducer.forEach(({ id, name, src, price, info, quantity }) => {
+    state.cart.forEach(({ id, name, src, price, info, quantity }) => {
         const props = { id, name, src, price, info, quantity }
         if (map.get(id)) {
             const updatedObject = Object.assign(props, {
