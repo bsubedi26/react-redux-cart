@@ -36,9 +36,6 @@ class Checkout extends React.Component {
       this.props.dispatch(CartAction.increaseQuantity(product))
   }
 
-  componentDidMount() {
-      console.log(this.props.getTotalPerItem)
-  }
   _renderItems() {
       const { getTotalPerItem } = this.props
 
