@@ -26,9 +26,7 @@ class ProductsPage extends Component {
         <Logo />
         <SubRoutes />
 
-        <div className="top-image">
-          {/* <img src="//cdn.shopify.com/s/files/1/0985/9080/t/12/assets/homepage_hero_image_1.jpg?3225173906714521792" alt="image" /> */}
-        </div>
+        <div className="top-image"></div>
 
         <div className="d-flex justify-content-center">
           <h4 className="top-title">
@@ -45,7 +43,7 @@ class ProductsPage extends Component {
                 <img onClick={this.routeToDetail.bind(this, item)} className="product-image pointer" src={item.images[0].src} alt={item.title} width="240" height="240" />
                 <h5 onClick={this.routeToDetail.bind(this, item)} className="product-title mt-4 pointer">{item.title}</h5>
                 <span onClick={this.routeToDetail.bind(this, item)} className="product-price mt-3 pointer">${item.variants[0].price}</span>
-                <button onClick={this.addToCart.bind(this, item)} className="btn btn-outline-primary pointer">Add</button>
+                {/* <button onClick={this.addToCart.bind(this, item)} className="btn btn-outline-primary pointer">Add</button> */}
             </div>
             )
             
