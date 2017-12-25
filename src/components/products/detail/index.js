@@ -2,16 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { actions as CartAction } from 'reducers/cart/action';
-import { Logo, SubRoutes, ProductTitle, ProductPrice, ImageViewer } from '../common';
+import { Logo, SubRoutes, ProductTitle, ProductPrice, ImageViewer, FadeInAndFadeOut } from '../common';
 
 class ProductDetail extends React.Component {
 
     state = {
-        quantity: 1
+        quantity: 1,
+        showAddToCartConfirmation: false
     }
 
     addToCart = (product) => {
         this.props.dispatch(CartAction.addToCart(product, this.state.quantity))
+
+        this.setAfterTime({ showAddToCartConfirmation: true }, 5)
+        this.setAfterTime({ showAddToCartConfirmation: false }, 2200)
+    }
+
+    setAfterTime(obj, time) {
+        setTimeout(() => {
+            this.setState(obj)
+        }, time)
     }
 
     decreaseQuantity = () => {
@@ -25,6 +35,14 @@ class ProductDetail extends React.Component {
         this.setState({
             quantity: this.state.quantity + 1
         })
+    }
+
+    _renderAddToCartConfirmation() {
+        return (
+            <FadeInAndFadeOut delay="1.5s">
+                <i className="fa fa-check-circle fa-2x checkmark" aria-hidden="true"></i>
+            </FadeInAndFadeOut>
+        )
     }
 
     render() {
@@ -48,7 +66,11 @@ class ProductDetail extends React.Component {
                         <i onClick={this.increaseQuantity} className="fa fa-plus pointer" aria-hidden="true"></i>
                         <br />
 
-                        <button className="mt-2 btn btn-sm pointer btn-add-cart" onClick={this.addToCart.bind(this, product)}>ADD TO CART</button>
+                        <div className="row">
+                            <button className="mt-2 btn btn-sm pointer btn-add-cart" onClick={this.addToCart.bind(this, product)}>ADD TO CART</button>
+                            {this.state.showAddToCartConfirmation ? this._renderAddToCartConfirmation() : null}
+                        </div>
+
                         <hr />
                         
                         <div className="detail-description" dangerouslySetInnerHTML={{ __html: product.body_html }}>

@@ -17,6 +17,7 @@ const CheckoutTitle = styled.h4`
     padding: 10px;
 `
 
+
 class Checkout extends React.Component {
  
   removeProduct(product) {
@@ -93,7 +94,7 @@ class Checkout extends React.Component {
     return (
         <div className="mx-auto w-75 mt-5">
             <div className="d-flex justify-content-center">
-                <CheckoutTitle onClick={() => console.log(this.props)}>
+                <CheckoutTitle>
                     SHOPPING CART
                 </CheckoutTitle>
             </div>

@@ -1,5 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FadeIn, FadeOut } from 'animate-css-styled-components';
+
+
+export const FadeInAndFadeOut = (props) => {
+    const { delay, children } = props
+
+    return (
+        <div className="mt-1 px-3">
+            <FadeOut delay={delay}>
+                <FadeIn>
+                    {children}
+                </FadeIn>
+            </FadeOut>
+        </div>
+    )
+}
 
 export const Logo = () => {
     return (
