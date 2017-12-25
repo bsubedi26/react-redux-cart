@@ -29,7 +29,8 @@ class Checkout extends React.Component {
   }
 
   clearCart() {
-    this.props.dispatch(CartAction.reset())
+      console.log(this.props.getTotalPerItem)
+    // this.props.dispatch(CartAction.reset())
   }
 
   decreaseQuantity(product) {

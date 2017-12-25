@@ -1,5 +1,5 @@
-import reducer from '../bremont'
-import data from '../bremont/data'
+import reducer from '../../bremont'
+import data from '../../bremont/data'
 
 describe('reducers', () => {
   describe('bremont', () => {

@@ -16,15 +16,15 @@ export const totalCheckoutCost = (state) => {
 
 export const getTotalPerItem = (state) => {
     return Object.values(state.cart.quantityById).map(item => {
-            let { singlePrice, quantity, id } = item
-            let totalPrice = quantity * singlePrice
-            let product = state.bremont.find(item => item.id === id)
+        let { singlePrice, quantity, id } = item
+        let totalPrice = quantity * singlePrice
+        let product = state.bremont.find(item => item.id === id)
 
-            return {
-                product,
-                quantity,
-                singlePrice,
-                totalPrice
-            }
+        return {
+            product,
+            quantity,
+            singlePrice,
+            totalPrice
+        }
     })
 }
