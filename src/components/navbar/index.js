@@ -34,11 +34,11 @@ class NavBar extends React.Component {
         </div>
         <div className="p-1 flex-2">
           <ul className="nav-middle-side">
-            <a target="_blank" href="//bremont.com/collection"><li className="mx-2">COLLECTION</li></a>
-            <li className="mx-2">EXPLORE BREMONT</li>
-            <li className="mx-2">NEAREST STORES</li>
-            <li className="mx-2">BLOGBOOK</li>
-            <li className="mx-2">CUSTOMER SERVICE</li>
+            <a rel="noopener noreferrer" target="_blank" href="//bremont.com/collection"><li className="mx-2">COLLECTION</li></a>
+            <a rel="noopener noreferrer" target="_blank" href="//bremont.com/explore-bremont"><li className="mx-2">EXPLORE BREMONT</li></a>
+            <a rel="noopener noreferrer" target="_blank" href="//bremont.com/nearest-stores/store-locator"><li className="mx-2">NEAREST STORES</li></a>
+            <a rel="noopener noreferrer" target="_blank" href="//bremont.com/blogbook"><li className="mx-2">BLOGBOOK</li></a>
+            <a rel="noopener noreferrer" target="_blank" href="//bremont.com/customer-service"><li className="mx-2">CUSTOMER SERVICE</li></a>
           </ul>
         </div>
         

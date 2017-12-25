@@ -13,11 +13,11 @@ export const SubRoutes = () => {
     return (
         <div className="d-flex justify-content-center">
             <ul className="d-inline-block ul-style-none ul-sub-routes">
-                <li className="mx-1">CHRISTMAS GIFTS</li>
-                <li className="mx-1">WATCH STRAPS & ACCESSORIES</li>
-                <li className="mx-1">SMALL ACCESSORIES</li>
-                <li className="mx-1">MILITARY</li>
-                <li className="mx-1">BOUTIQUES</li>
+                <a rel="noopener noreferrer" target="_blank" href="//shop.bremont.com/collections/christmas-gifts"><li className="mx-1">CHRISTMAS GIFTS</li></a>
+                <a rel="noopener noreferrer" target="_blank" href="//shop.bremont.com/collections/watch-straps"><li className="mx-1">WATCH STRAPS & ACCESSORIES</li></a>
+                <a rel="noopener noreferrer" target="_blank" href="//shop.bremont.com/collections/small-accessories"><li className="mx-1">SMALL ACCESSORIES</li></a>
+                <a rel="noopener noreferrer" target="_blank" href="//shop.bremont.com/collections/military-and-special-projects-deposits"><li className="mx-1">MILITARY</li></a>
+                <a rel="noopener noreferrer" target="_blank" href="//bremont.com/nearest-stores/bremont-boutiques"><li className="mx-1">BOUTIQUES</li></a>
             </ul>
         </div>
     )
