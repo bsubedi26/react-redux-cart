@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Logo, SubRoutes } from './common';
 
@@ -46,6 +47,10 @@ class ProductsPage extends Component {
     );
   }
 };
+
+ProductsPage.propTypes = {
+  bremont: PropTypes.array.isRequired
+}
 
 const mapState = (state) => ({
   bremont: state.bremont

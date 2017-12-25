@@ -21,7 +21,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "redux-immutable-state-invariant": "^2.1.0"
-  }
+  "devDependencies": {}
 }

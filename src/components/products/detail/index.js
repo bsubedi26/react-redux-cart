@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { actions as CartAction } from 'reducers/cart/action';
 import { Logo, SubRoutes, ProductTitle, ProductPrice, ImageViewer } from '../common';
@@ -60,6 +61,10 @@ class ProductDetail extends React.Component {
     }
 };
 
+ProductDetail.propTypes = {
+    product: PropTypes.object.isRequired
+}
+  
 const findProduct = (state, id) => {
     return state.bremont.find(item => item.id === parseInt(id, 10))
 }
