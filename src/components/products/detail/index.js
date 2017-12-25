@@ -1,59 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addCartAction } from 'reducers/cart';
-import { Logo, SubRoutes } from '../common';
-import styled from 'styled-components';
-
-const ProductTitle = styled.h1`
-    display: block;
-    font-weight: 400;
-    margin: 0 0 0.5em;
-    line-height: 1.4;
-    color: #000;
-    font-size: 1.3rem;
-`
-const ProductPrice = styled.span`
-    display: block;
-    font-size: 12px;
-    font-size: 0.75rem;
-    font-weight: 400;
-    color: #666;
-
-`
-
-class ImageViewer extends React.Component {
-    state = {
-        currentIdx: 0,
-        images: this.props.images || []
-    }
-    changeImage(idx) {
-        this.setState({
-            currentIdx: idx
-        })
-    }
-
-    render() {
-        const { currentIdx, images } = this.state
-        return (
-            <div>
-                <div className="current-image">
-                    <img className="product-image pointer" src={images[currentIdx].src} alt="image" width="300" height="300" />
-                </div>
-
-                <div className="other-images">
-                    {images.map((image, i) => {
-                        if (currentIdx !== i) {
-                            return (
-                                <img onClick={this.changeImage.bind(this, i)} key={image.id} className="border-1 p-2 product-image pointer" src={image.src} alt="image" width="70" height="70" />
-                            )
-                        }
-                    })}
-                </div>
-            </div>
-        )
-    }
-}
-
+import { actions as CartAction } from 'reducers/cart';
+import { Logo, SubRoutes, ProductTitle, ProductPrice, ImageViewer } from '../common';
 
 class ProductDetail extends React.Component {
 
@@ -61,12 +9,8 @@ class ProductDetail extends React.Component {
         quantity: 1
     }
 
-    addCart() {
-        this.props.addCartAction(this.state.product, 1)
-    }
-
-    check = () => {
-        console.log(this.props.product)
+    addToCart = (product) => {
+        this.props.dispatch(CartAction.addToCart(product, this.state.quantity))
     }
 
     decreaseQuantity = () => {
@@ -103,7 +47,7 @@ class ProductDetail extends React.Component {
                         <i onClick={this.increaseQuantity} className="fa fa-plus pointer" aria-hidden="true"></i>
                         <br />
 
-                        <button className="mt-2 btn btn-sm btn-add-cart" onClick={this.check}>ADD TO CART</button>
+                        <button className="mt-2 btn btn-sm pointer btn-add-cart" onClick={this.addToCart.bind(this, product)}>ADD TO CART</button>
                         <hr />
                         
                         <div className="detail-description" dangerouslySetInnerHTML={{ __html: product.body_html }}>
@@ -124,4 +68,4 @@ const mapState = (state, props) => ({
     product: findProduct(state, props.match.params.id)
 })
 
-export default connect(mapState, { addCartAction })(ProductDetail);
+export default connect(mapState)(ProductDetail);

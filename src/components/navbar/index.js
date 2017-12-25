@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { totalItemsInCart, totalCost } from '../reducers/cart';
-import { SlideInLeft } from 'animate-css-styled-components';
+import { totalItemsInCart, totalCost } from 'reducers/cart';
 
 class NavBar extends React.Component {
   state = {
@@ -13,24 +12,29 @@ class NavBar extends React.Component {
     ]
   }
 
-  handleSearchClick = (e) => {
+  componentDidMount() {
+
+  }
+
+  handleCartClick = (e) => {
     e.preventDefault()
-    console.log('cl')
+    console.log(this.props)
+    // this.props.history.push('/checkout')
   }
 
   render() {
+    const { totalItemsInCart, totalCost } = this.props
 
     return (
       <nav className="d-flex nav-contain">
         <div className="p-1 flex-1">
           <ul className="nav-left-side">
-            <li className="mx-2">Login</li>
-            <li className="mx-2">Create Account</li>
+            <Link to="/"><li className="mx-2">HOME</li></Link>
           </ul>
         </div>
         <div className="p-1 flex-2">
           <ul className="nav-middle-side">
-            <li className="mx-2">COLLECTION</li>
+            <a target="_blank" href="//bremont.com/collection"><li className="mx-2">COLLECTION</li></a>
             <li className="mx-2">EXPLORE BREMONT</li>
             <li className="mx-2">NEAREST STORES</li>
             <li className="mx-2">BLOGBOOK</li>
@@ -38,9 +42,10 @@ class NavBar extends React.Component {
           </ul>
         </div>
         
-        <div onClick={this.handleSearchClick} className="p-1 nav-right-side">
-            <i className="fa fa-search" aria-hidden="true"></i>
-        </div>
+        <Link to="/checkout" className="p-1 nav-right-side flex-half">
+          <span className="px-1" >{totalItemsInCart} items | ${totalCost}</span>
+          <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+        </Link>
 
       </nav>
     );

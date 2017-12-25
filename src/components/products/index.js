@@ -1,33 +1,22 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addCartAction } from 'reducers/cart';
 import { Logo, SubRoutes } from './common';
-
+import { actions as CartAction } from 'reducers/cart';
 
 
 class ProductsPage extends Component {
-
-  addCart(product) {
-    let q = this.state.quantity
-    this.props.addCartAction(product, q)
-  }
 
   routeToDetail(product) {
     const { history } = this.props
     history.push(`/detail/${product.id}`)
   }
 
-  quantityChange(event) {
-    var obj = {};
-    obj[event.target.id] = event.target.value;
-    this.setState(obj);
-  }
-
   handleSearchClick = (e) => {
     e.preventDefault();
-    console.log('cl')
+  }
+  
+  addToCart(product) {
+      this.props.dispatch(CartAction.addToCart(product, 1))
   }
 
   render() {
@@ -52,10 +41,11 @@ class ProductsPage extends Component {
 
           {this.props.bremont && this.props.bremont.map((item, i) => {
             return (
-              <div onClick={this.routeToDetail.bind(this, item)} className="m-3" key={i}>
-                <img className="product-image pointer" src={item.images[0].src} alt="image" width="240" height="240" />
-                <h5 className="product-title mt-4 pointer">{item.title}</h5>
-                <span className="product-price mt-3 pointer">${item.variants[0].price}</span>
+              <div className="m-3" key={i}>
+                <img onClick={this.routeToDetail.bind(this, item)} className="product-image pointer" src={item.images[0].src} alt={item.title} width="240" height="240" />
+                <h5 onClick={this.routeToDetail.bind(this, item)} className="product-title mt-4 pointer">{item.title}</h5>
+                <span onClick={this.routeToDetail.bind(this, item)} className="product-price mt-3 pointer">${item.variants[0].price}</span>
+                <button onClick={this.addToCart.bind(this, item)} className="btn btn-outline-primary pointer">Add</button>
             </div>
             )
             
@@ -70,13 +60,8 @@ class ProductsPage extends Component {
   }
 };
 
-ProductsPage.propTypes = {
-  addCartAction: PropTypes.func.isRequired
-
-}
-
 const mapState = (state) => ({
   bremont: state.bremont
 })
 
-export default connect(mapState, { addCartAction })(ProductsPage);
+export default connect(mapState)(ProductsPage);

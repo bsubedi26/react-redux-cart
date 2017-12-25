@@ -1,3 +1,12 @@
+.flex-half {
+    flex: 0.5;
+}
+.flex-third {
+    flex: 0.3;
+}
+.flex-fourth {
+    flex: 0.4;
+}
 .flex-1 {
     flex: 1;
 }

@@ -44,9 +44,10 @@
 .nav-right-side:hover {
     background-color: white;
     transition: background-color .5s;
+    text-decoration: none;
 }
 
-.nav-right-side:hover i {
+.nav-right-side:hover span, .nav-right-side:hover i {
     color: var(--bre-red);
     transition: color .5s;
 }

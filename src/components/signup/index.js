@@ -2,16 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { userCreate } from '../actions/usersAction';
 
 class SignupPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      password: "",
-      email: ""
-    }
+  state = {
+    username: "",
+    password: "",
+    email: ""
   }
 
   setChange(event) {
@@ -24,7 +20,7 @@ class SignupPage extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     // ACTION TO CREATE USER
-    this.props.userCreate(this.state)
+    // this.props.userCreate(this.state)
   }
 
   render() {
@@ -82,4 +78,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { userCreate })(SignupPage);
+export default connect(mapStateToProps, {})(SignupPage);

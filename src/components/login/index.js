@@ -29,14 +29,12 @@ class LoginPage extends React.Component {
   }
 
   render() {
-    const { flashMessages } = this.props;
     return (
       <div className="row">
         <form onSubmit={this.handleSubmit.bind(this)} className="col s12 center-align">
         
         <div className="card-panel">
-        <h4 className="center-align card-panel blue-grey-text"
-        style={{fontFamily: 'Comic Sans MS'}}>Login to access this page!</h4>
+        <h4 className="center-align card-panel blue-grey-text" style={{fontFamily: 'Comic Sans MS'}}>Sign In Below:</h4>
           
           <div className="row">
             <div className="input-field col s12">
@@ -44,9 +42,6 @@ class LoginPage extends React.Component {
               <input id="username" type="text" className="validate" onChange={this.setChange.bind(this)} />
               <label htmlFor="username">User Name</label>
             </div>
-
-            <span className="red-text">{flashMessages.length ? flashMessages[flashMessages.length - 1] : null}</span>
-            
 
           </div>
 
