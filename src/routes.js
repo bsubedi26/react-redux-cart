@@ -9,7 +9,6 @@ import Checkout from './components/products/checkout';
 
 import LoginPage from './components/login';
 import SignupPage from './components/signup';
-// import requireAuth from './components/auth/requireAuth';
 
 function Routes() {
     return (

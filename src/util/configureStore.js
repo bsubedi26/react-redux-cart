@@ -7,6 +7,7 @@ export default function configureStore() {
     const store = createStore(
         allReducers,
         compose(
+            // applyMiddleware(thunk, freezer()),
             applyMiddleware(thunk, freeze),
             window.devToolsExtension ? window.devToolsExtension() : f => f
         ),

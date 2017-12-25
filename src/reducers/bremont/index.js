@@ -1,4 +1,4 @@
-import initialState from './data/bremont';
+import initialState from './data';
 
 export default function reducer (state = initialState, action) {
     const { type } = action;
