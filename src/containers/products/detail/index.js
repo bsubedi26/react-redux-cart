@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { actions as CartAction } from 'reducers/cart/action';
 import { Logo, SubRoutes, ProductTitle, ProductPrice, ImageViewer } from '../common';
 import Toast from 'components/Toast';
+import ReactDOM from 'react-dom';
 
 class ProductDetail extends React.Component {
 
@@ -19,9 +20,10 @@ class ProductDetail extends React.Component {
     }
 
     showToast() {
-        let toast = document.getElementById("toast")
+        let toast = ReactDOM.findDOMNode(this.toastCmp)
         toast.className = "show"
         this.setState({ toastPresent: true })
+
         setTimeout(() => {
             toast.className = toast.className.replace("show", "")
             // if Cmp is mounted (meaning the route has not changed)
@@ -48,7 +50,7 @@ class ProductDetail extends React.Component {
             <div>
                 <Logo />
                 <SubRoutes />
-                <Toast ref="toast" message="Successfully added to cart!" />
+                <Toast ref={ref => this.toastCmp = ref} message="Successfully added to cart!" />
 
                 <div className="mx-auto w-75 row">
                     <div className="col">
