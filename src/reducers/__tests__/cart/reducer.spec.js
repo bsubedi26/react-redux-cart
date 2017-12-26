@@ -2,7 +2,6 @@ import reducer from '../../cart'
 import { types } from '../../cart/action'
 import { omit } from 'lodash'
 
-
 describe('reducers', () => {
   describe('cart', () => {
     const initialState = {
