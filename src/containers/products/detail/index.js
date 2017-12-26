@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { actions as CartAction } from 'reducers/cart/action';
-import { Logo, SubRoutes, ProductTitle, ProductPrice, ImageViewer } from '../common';
+import { Logo, SubRoutes, ProductTitle, ProductPrice, ImageViewer, FadeInAndFadeOut } from '../common';
 import Toast from 'components/Toast';
 import ReactDOM from 'react-dom';
 
@@ -10,24 +10,36 @@ class ProductDetail extends React.Component {
 
     state = {
         quantity: 1,
-        toastPresent: false
+        showAddToCartConfirmation: false
     }
 
     addToCart = (product) => {
         const { dispatch } = this.props
         dispatch(CartAction.addToCart(product, this.state.quantity))
-        if (!this.state.toastPresent) { this.showToast() }
+        if (!this.state.showAddToCartConfirmation) {
+            this.showToast()
+        }
+    }
+    
+    _renderAddToCartConfirmation() {
+        return (
+            <FadeInAndFadeOut delay="2s">
+                <i className="fa fa-check-circle fa-2x checkmark" aria-hidden="true"></i>
+            </FadeInAndFadeOut>
+        )
     }
 
     showToast() {
         let toast = ReactDOM.findDOMNode(this.toastCmp)
         toast.className = "show"
-        this.setState({ toastPresent: true })
+        this.setState({ showAddToCartConfirmation: true })
 
         setTimeout(() => {
             toast.className = toast.className.replace("show", "")
             // if Cmp is mounted (meaning the route has not changed)
-            if (this.updater.isMounted(this)) { this.setState({ toastPresent: false }) }
+            if (this.updater.isMounted(this)) {
+                this.setState({ showAddToCartConfirmation: false })
+            }
         }, 3000)
     }
 
@@ -68,6 +80,7 @@ class ProductDetail extends React.Component {
 
                         <div className="row">
                             <button className="mt-2 btn btn-sm pointer btn-add-cart" onClick={this.addToCart.bind(this, product)}>ADD TO CART</button>
+                            {this.state.showAddToCartConfirmation ? this._renderAddToCartConfirmation() : null}
                         </div>
 
                         <hr />
