@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './assets/styles/index.css';
 
 import { Provider } from 'react-redux';
-import configureStore from 'util/configureStore';
+import configureStore from 'util/store';
 import Routes from './routes';
 
 
