@@ -4,7 +4,6 @@ import freeze from 'redux-freeze';
 import allReducers from 'reducers';
 
 export default function configureStore() {
-    console.log('dev')
     const store = createStore(
         allReducers,
         compose(
