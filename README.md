@@ -1,9 +1,6 @@
 # React-Redux-Cart
+[Live Demo](https://bsubedi26.github.io/react-redux-cart){:target="_blank"}
 
-## Live Demo
-https://bsubedi26.github.io/react-redux-cart
-
-## Screenshots
 ![Alt text](screenshots/home.PNG?raw=true "Products List")
 ![Alt text](screenshots/detail.PNG?raw=true "Product Detail")
 ![Alt text](screenshots/cart.PNG?raw=true "Cart Checkout")
