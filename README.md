@@ -4,7 +4,9 @@
 https://bsubedi26.github.io/react-redux-cart
 
 ## Screenshots
-![Alt text](screenshots/home.PNG?raw=true "Products Page")
+![Alt text](screenshots/home.PNG?raw=true "Products List")
+![Alt text](screenshots/detail.PNG?raw=true "Product Detail")
+![Alt text](screenshots/cart.PNG?raw=true "Cart Checkout")
 
 ## Getting Started
 
