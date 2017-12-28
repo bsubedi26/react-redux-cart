@@ -1,5 +1,8 @@
 ## Available Scripts
 
+### Live Demo
+[https://bsubedi26.github.io/react-redux-cart]https://bsubedi26.github.io/react-redux-cart
+
 In the project directory, you can run:
 
 ### `npm start`
