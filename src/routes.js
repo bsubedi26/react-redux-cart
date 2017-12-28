@@ -1,12 +1,10 @@
-import React from 'react'
-import { HashRouter as Router, Route } from 'react-router-dom'
+import React from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 import Navbar from './components/navbar';
-
 import Products from './components/products';
 import ProductDetail from './components/products/detail';
 import Checkout from './components/products/checkout';
-
 import LoginPage from './components/login';
 import SignupPage from './components/signup';
 // import requireAuth from './components/auth/requireAuth';
@@ -28,4 +26,4 @@ function Routes() {
     )
 }
 
-export default Routes
+export default Routes;
