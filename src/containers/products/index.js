@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Logo, SubRoutes } from './common';
-import { actions as CartAction } from 'reducers/cart';
-
 
 class ProductsPage extends Component {
 
@@ -11,16 +10,7 @@ class ProductsPage extends Component {
     history.push(`/detail/${product.id}`)
   }
 
-  handleSearchClick = (e) => {
-    e.preventDefault();
-  }
-  
-  addToCart(product) {
-      this.props.dispatch(CartAction.addToCart(product, 1))
-  }
-
   render() {
-
     return (
       <div>
         <Logo />
@@ -57,6 +47,10 @@ class ProductsPage extends Component {
     );
   }
 };
+
+ProductsPage.propTypes = {
+  bremont: PropTypes.array.isRequired
+}
 
 const mapState = (state) => ({
   bremont: state.bremont

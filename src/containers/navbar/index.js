@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { totalItemsInCart, totalCost } from 'reducers/cart';
+import { totalItemsInCart, totalCheckoutCost } from 'reducers/cart/selector';
 
 class NavBar extends React.Component {
   state = {
@@ -12,18 +12,8 @@ class NavBar extends React.Component {
     ]
   }
 
-  componentDidMount() {
-
-  }
-
-  handleCartClick = (e) => {
-    e.preventDefault()
-    console.log(this.props)
-    // this.props.history.push('/checkout')
-  }
-
   render() {
-    const { totalItemsInCart, totalCost } = this.props
+    const { totalItemsInCart, totalCheckoutCost } = this.props
 
     return (
       <nav className="d-flex nav-contain">
@@ -43,7 +33,7 @@ class NavBar extends React.Component {
         </div>
         
         <Link to="/checkout" className="p-1 nav-right-side flex-half">
-          <span className="px-1" >{totalItemsInCart} items | ${totalCost}</span>
+          <span className="px-1" >{totalItemsInCart} items | ${totalCheckoutCost}</span>
           <i className="fa fa-shopping-cart" aria-hidden="true"></i>
         </Link>
 
@@ -53,15 +43,13 @@ class NavBar extends React.Component {
 };
 
 NavBar.propTypes = {
-  cart: PropTypes.array.isRequired
+  totalItemsInCart: PropTypes.number.isRequired,
+  totalCheckoutCost: PropTypes.number.isRequired,
 }
 
-function mapStateToProps(state) {
-  return {
-    cart: state.cart,
-    totalItemsInCart: totalItemsInCart(state),
-    totalCost: totalCost(state)
-  }
-}
+const mapStateToProps = (state) => ({
+  totalItemsInCart: totalItemsInCart(state),
+  totalCheckoutCost: totalCheckoutCost(state)
+})
 
-export default connect(mapStateToProps, {})(NavBar);
+export default connect(mapStateToProps)(NavBar);
