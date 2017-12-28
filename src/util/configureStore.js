@@ -6,15 +6,16 @@ import freeze from 'redux-freeze';
 
 export default function configureStore() {
     let isProduction = process.env.NODE_ENV === 'production';
+    let store;
 
     if (isProduction) {
-        let store = createStore(
+        store = createStore(
             allReducers,
             compose(applyMiddleware(thunk)),
         );
     }
     else {
-        let store = createStore(
+        store = createStore(
             allReducers,
             compose(
                 applyMiddleware(thunk, freeze),
