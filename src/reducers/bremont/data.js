@@ -1,3 +1,34 @@
+import cobhamCoatWallet from '../../assets/img/cobham_coat_wallet.png';
+import alligatorStrapBrown from '../../assets/img/alligator_strap_brown.png';
+import alligatorStrapBlack from '../../assets/img/alligator_strap_black.png';
+import canvasStrapGreen from '../../assets/img/canvas_strap_green.png';
+import leatherStrapBlackWhite from '../../assets/img/leather_strap_black_white.png';
+import mbBarrelBronze from '../../assets/img/mb_barrel_bronze.png';
+import pinBuckleSteel from '../../assets/img/pin_buckle_steel.png';
+import pinBuckleSteelPolished from '../../assets/img/pin_buckle_steel_polished.png';
+import pinBuckleTitanium from '../../assets/img/pin_buckle_titanium.png';
+import pinBuckleDlc from '../../assets/img/pin_buckle_dlc.png';
+import natoStrapKhaki from '../../assets/img/nato_strap_khaki.png';
+import natoStrapBlackRed from '../../assets/img/nato_strap_black_red.png';
+import natoStrapBlackWhite from '../../assets/img/nato_strap_black_white.png';
+import hipFlask from '../../assets/img/hip_flask.png';
+import bremontInvictusBracelet from '../../assets/img/bremont_invictus_bracelet.png';
+import natoStrapGreyCanvas from '../../assets/img/nato_strap_grey_canvas.png';
+import natoStrapStoneCanvas from '../../assets/img/nato_strap_stone_canvas.png';
+import nubuckLadiesStrapBlack from '../../assets/img/nubuck_ladies_strap_black.png';
+import lizardLadiesStrapWhite from '../../assets/img/lizard_ladies_strap_white.png';
+import leatherLadiesStrapTan from '../../assets/img/leather_ladies_strap_tan.png';
+import crocodileLadiesStrapDarkRed from '../../assets/img/crocodile_ladies_strap_dark_red.png';
+import alligatorLadiesStrapDarkBlue from '../../assets/img/alligator_ladies_strap_dark_blue.png';
+import alligatorLadiesStrapBlack from '../../assets/img/alligator_ladies_strap_black.png';
+import leatherStrapBlackRedNortonV4 from '../../assets/img/leather_strap_black_red_norton_v4.png';
+import vintageLeatherStrapDarkBrownFullStitch from '../../assets/img/vintage_leather_strap_dark_brown_full_stitch.png';
+import vintageLeatherStrapDarkBrownSideStitch from '../../assets/img/vintage_leather_strap_dark_brown_side_stitch.png';
+import pocketSquareRed from '../../assets/img/pocket_square_red.png';
+import pocketSquareGreen from '../../assets/img/pocket_square_green.png';
+import tieGreen from '../../assets/img/tie_green.png';
+import tieRed from '../../assets/img/tie_red.png';
+
 export default [
     {
         "id": 2204678213,
@@ -46,7 +77,7 @@ export default [
                 "updated_at": "2015-09-23T12:00:08+01:00",
                 "product_id": 2204678213,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont23804.jpg?v=1443006008",
+                "src": cobhamCoatWallet,
                 "width": 1024,
                 "height": 1024
             },
@@ -57,7 +88,7 @@ export default [
                 "updated_at": "2015-09-23T12:00:09+01:00",
                 "product_id": 2204678213,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont23805.jpg?v=1443006009",
+                "src": cobhamCoatWallet,
                 "width": 1024,
                 "height": 1024
             },
@@ -68,7 +99,7 @@ export default [
                 "updated_at": "2015-09-23T12:00:21+01:00",
                 "product_id": 2204678213,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont23806.jpg?v=1443006021",
+                "src": cobhamCoatWallet,
                 "width": 1024,
                 "height": 683
             }
@@ -191,7 +222,7 @@ export default [
                 "updated_at": "2015-09-23T11:27:47+01:00",
                 "product_id": 2204590853,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_Alligator_WrightFlyer_Brown_22mm.jpg?v=1443004067",
+                "src": alligatorStrapBrown,
                 "width": 1024,
                 "height": 1024
             },
@@ -202,7 +233,7 @@ export default [
                 "updated_at": "2015-09-23T11:27:49+01:00",
                 "product_id": 2204590853,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_Alligator_WrightFlyer_Brown_sw.jpg?v=1443004069",
+                "src": alligatorStrapBrown,
                 "width": 1024,
                 "height": 1024
             }
@@ -335,7 +366,7 @@ export default [
                 "updated_at": "2015-09-23T11:26:56+01:00",
                 "product_id": 2204573637,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_Alligator_WrightFlyer_Black_22mm.jpg?v=1443004016",
+                "src": alligatorStrapBlack,
                 "width": 1024,
                 "height": 1024
             },
@@ -346,7 +377,7 @@ export default [
                 "updated_at": "2015-09-23T11:26:58+01:00",
                 "product_id": 2204573637,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_Alligator_WrightFlyer_Black_swatch.jpg?v=1443004018",
+                "src": alligatorStrapBlack,
                 "width": 1024,
                 "height": 1024
             }
@@ -419,7 +450,7 @@ export default [
                 "updated_at": "2015-09-23T11:21:48+01:00",
                 "product_id": 2204557509,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_Canvas_Green_22mm.jpg?v=1443003708",
+                "src": canvasStrapGreen,
                 "width": 1024,
                 "height": 1024
             },
@@ -430,7 +461,7 @@ export default [
                 "updated_at": "2015-09-23T11:21:50+01:00",
                 "product_id": 2204557509,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_Canvas_Green_swatch.jpg?v=1443003710",
+                "src": canvasStrapGreen,
                 "width": 1024,
                 "height": 1024
             }
@@ -501,7 +532,7 @@ export default [
                 "updated_at": "2015-09-23T10:48:59+01:00",
                 "product_id": 2204482245,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_NonIntegrated_Leather_EP120_Black_22mm.jpg?v=1443001739",
+                "src": leatherStrapBlackWhite,
                 "width": 1024,
                 "height": 1024
             },
@@ -512,7 +543,7 @@ export default [
                 "updated_at": "2015-09-23T10:49:01+01:00",
                 "product_id": 2204482245,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_NonIntegrated_Leather_EP120_Black_swatch.jpg?v=1443001741",
+                "src": leatherStrapBlackWhite,
                 "width": 1024,
                 "height": 1024
             }
@@ -587,7 +618,7 @@ export default [
                 "updated_at": "2015-11-27T12:52:39+00:00",
                 "product_id": 2204815621,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_B_15378_Bronze.jpg?v=1448628759",
+                "src": mbBarrelBronze,
                 "width": 1024,
                 "height": 1024
             },
@@ -598,7 +629,7 @@ export default [
                 "updated_at": "2015-11-27T12:52:41+00:00",
                 "product_id": 2204815621,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_B_15403_Bronze_B.jpg?v=1448628761",
+                "src": mbBarrelBronze,
                 "width": 1024,
                 "height": 1024
             }
@@ -658,7 +689,7 @@ export default [
                 "updated_at": "2015-10-08T17:36:20+01:00",
                 "product_id": 2380208965,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_20mmPinBuckleTitanium.jpg?v=1444322180",
+                "src": pinBuckleTitanium,
                 "width": 1024,
                 "height": 1024
             }
@@ -745,7 +776,7 @@ export default [
                 "updated_at": "2015-10-08T17:31:46+01:00",
                 "product_id": 2380164805,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_20mmPinBucklesteel.jpg?v=1444321906",
+                "src": pinBuckleSteel,
                 "width": 1024,
                 "height": 1024
             }
@@ -853,7 +884,7 @@ export default [
                 "updated_at": "2015-10-08T17:36:54+01:00",
                 "product_id": 2380215749,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_20mmPinBucklePolished.jpg?v=1444322214",
+                "src": pinBuckleSteelPolished,
                 "width": 1024,
                 "height": 1024
             }
@@ -922,7 +953,7 @@ export default [
                 "updated_at": "2015-10-08T17:35:16+01:00",
                 "product_id": 2380196933,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_20mmPinBuckleDLC.jpg?v=1444322116",
+                "src": pinBuckleDlc,
                 "width": 1024,
                 "height": 1024
             }
@@ -990,7 +1021,7 @@ export default [
                 "updated_at": "2015-10-26T11:04:03+00:00",
                 "product_id": 2541811013,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_Nato_Military_KhakiwKhakiStitch_22mm.jpg?v=1445857443",
+                "src": natoStrapKhaki,
                 "width": 1025,
                 "height": 1025
             }
@@ -1066,7 +1097,7 @@ export default [
                 "updated_at": "2015-10-26T11:03:30+00:00",
                 "product_id": 2541805061,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_Nato_Military_BlackwRedStitch_22mm.jpg?v=1445857410",
+                "src": natoStrapBlackRed,
                 "width": 1025,
                 "height": 1025
             }
@@ -1142,7 +1173,7 @@ export default [
                 "updated_at": "2015-10-26T11:03:48+00:00",
                 "product_id": 2536711301,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/5832_Bremont_Nato_Military_BlackwWhiteStitch_22mm.jpg?v=1445857428",
+                "src": natoStrapBlackWhite,
                 "width": 1025,
                 "height": 1025
             }
@@ -1220,7 +1251,7 @@ export default [
                 "updated_at": "2016-11-24T11:32:03+00:00",
                 "product_id": 8504510729,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Hip_Flask_5.jpg?v=1479987123",
+                "src": hipFlask,
                 "width": 1024,
                 "height": 1024
             },
@@ -1231,7 +1262,7 @@ export default [
                 "updated_at": "2016-11-24T11:32:03+00:00",
                 "product_id": 8504510729,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Hip_Flask_3.jpg?v=1479987123",
+                "src": hipFlask,
                 "width": 1024,
                 "height": 1024
             },
@@ -1242,7 +1273,7 @@ export default [
                 "updated_at": "2016-11-24T11:32:03+00:00",
                 "product_id": 8504510729,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Hip_Flask_4.jpg?v=1479987123",
+                "src": hipFlask,
                 "width": 1024,
                 "height": 1024
             },
@@ -1253,7 +1284,7 @@ export default [
                 "updated_at": "2016-11-24T11:32:03+00:00",
                 "product_id": 8504510729,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Hip_Flask_1.jpg?v=1479987123",
+                "src": hipFlask,
                 "width": 1024,
                 "height": 1024
             },
@@ -1264,7 +1295,7 @@ export default [
                 "updated_at": "2016-11-24T11:32:03+00:00",
                 "product_id": 8504510729,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Hip_Flask_2.jpg?v=1479987123",
+                "src": hipFlask,
                 "width": 1024,
                 "height": 1024
             }
@@ -1347,7 +1378,7 @@ export default [
                 "updated_at": "2017-09-08T11:49:36+01:00",
                 "product_id": 10359775945,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Bremont_Invictus_Games_Bracelet_Shop_Main.jpg?v=1504867776",
+                "src": bremontInvictusBracelet,
                 "width": 1024,
                 "height": 1024
             },
@@ -1358,7 +1389,7 @@ export default [
                 "updated_at": "2017-09-08T11:49:36+01:00",
                 "product_id": 10359775945,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Bremont_Invictus_Games_Bracelet_Shop_Close_Up.jpg?v=1504867776",
+                "src": bremontInvictusBracelet,
                 "width": 1024,
                 "height": 1024
             },
@@ -1369,7 +1400,7 @@ export default [
                 "updated_at": "2017-09-08T11:49:36+01:00",
                 "product_id": 10359775945,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Bremont_Invictus_Games_Bracelet_Shop_1.jpg?v=1504867776",
+                "src": bremontInvictusBracelet,
                 "width": 1024,
                 "height": 1024
             },
@@ -1380,7 +1411,7 @@ export default [
                 "updated_at": "2017-09-08T11:49:36+01:00",
                 "product_id": 10359775945,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Bremont_Invictus_Games_Bracelet_Shop_2.jpg?v=1504867776",
+                "src": bremontInvictusBracelet,
                 "width": 1024,
                 "height": 1024
             }
@@ -1484,7 +1515,7 @@ export default [
                 "updated_at": "2017-11-28T12:44:20+00:00",
                 "product_id": 10353382025,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/NATO_Grey_Canvas_Shop-nobuckle.jpg?v=1511873060",
+                "src": natoStrapGreyCanvas,
                 "width": 1024,
                 "height": 1024
             }
@@ -1616,7 +1647,7 @@ export default [
                 "updated_at": "2017-11-28T12:47:12+00:00",
                 "product_id": 10353476297,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/NATO_Stone_Canvas_Shop_nobuckle.jpg?v=1511873232",
+                "src": natoStrapStoneCanvas,
                 "width": 1024,
                 "height": 1024
             }
@@ -1726,7 +1757,7 @@ export default [
                 "updated_at": "2017-06-15T11:04:51+01:00",
                 "product_id": 9767015305,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Black_Buffalo_16mm_Strap.jpg?v=1497521091",
+                "src": nubuckLadiesStrapBlack,
                 "width": 1024,
                 "height": 1024
             },
@@ -1737,7 +1768,7 @@ export default [
                 "updated_at": "2017-06-15T11:05:53+01:00",
                 "product_id": 9767015305,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Black_Buffalo_16mm_Strap_Detail.jpg?v=1497521153",
+                "src": nubuckLadiesStrapBlack,
                 "width": 1024,
                 "height": 1024
             }
@@ -1850,7 +1881,7 @@ export default [
                 "updated_at": "2017-06-15T10:52:36+01:00",
                 "product_id": 9766973321,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_White_Lizard_16mm_Strap.jpg?v=1497520356",
+                "src": lizardLadiesStrapWhite,
                 "width": 1024,
                 "height": 1024
             }
@@ -1961,7 +1992,7 @@ export default [
                 "updated_at": "2017-06-15T11:12:23+01:00",
                 "product_id": 9767038217,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Tan_16mm_Strap.jpg?v=1497521543",
+                "src": leatherLadiesStrapTan,
                 "width": 1024,
                 "height": 1024
             },
@@ -1972,7 +2003,7 @@ export default [
                 "updated_at": "2017-06-15T11:12:31+01:00",
                 "product_id": 9767038217,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Tan_16mm_Strap_Detail.jpg?v=1497521551",
+                "src": leatherLadiesStrapTan,
                 "width": 1024,
                 "height": 1024
             }
@@ -2087,7 +2118,7 @@ export default [
                 "updated_at": "2017-06-15T10:44:20+01:00",
                 "product_id": 9766931401,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Red_Alligator_16mm_Strap.jpg?v=1497519860",
+                "src": crocodileLadiesStrapDarkRed,
                 "width": 1024,
                 "height": 1024
             },
@@ -2098,7 +2129,7 @@ export default [
                 "updated_at": "2017-06-15T10:44:26+01:00",
                 "product_id": 9766931401,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Red_Alligator_16mm_Strap_Detail.jpg?v=1497519866",
+                "src": crocodileLadiesStrapDarkRed,
                 "width": 1024,
                 "height": 1024
             }
@@ -2212,7 +2243,7 @@ export default [
                 "updated_at": "2017-06-15T10:41:13+01:00",
                 "product_id": 9766912073,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Blue_Alligator_16mm_Strap.jpg?v=1497519673",
+                "src": alligatorLadiesStrapDarkBlue,
                 "width": 1024,
                 "height": 1024
             },
@@ -2223,7 +2254,7 @@ export default [
                 "updated_at": "2017-06-15T10:41:19+01:00",
                 "product_id": 9766912073,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Blue_Alligator_16mm_Strap_Detail.jpg?v=1497519679",
+                "src": alligatorLadiesStrapDarkBlue,
                 "width": 1024,
                 "height": 1024
             }
@@ -2336,7 +2367,7 @@ export default [
                 "updated_at": "2017-06-15T10:16:57+01:00",
                 "product_id": 9766808137,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Black_Alligator_16mm_Strap.jpg?v=1497518217",
+                "src": alligatorLadiesStrapBlack,
                 "width": 1024,
                 "height": 1024
             },
@@ -2347,7 +2378,7 @@ export default [
                 "updated_at": "2017-06-15T10:17:05+01:00",
                 "product_id": 9766808137,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Black_Alligator_16mm_Strap_Detail.jpg?v=1497518225",
+                "src": alligatorLadiesStrapBlack,
                 "width": 1024,
                 "height": 1024
             }
@@ -2458,7 +2489,7 @@ export default [
                 "updated_at": "2017-06-12T15:28:22+01:00",
                 "product_id": 9737767113,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Black_Norton_Strap.jpg?v=1497277702",
+                "src": leatherStrapBlackRedNortonV4,
                 "width": 1024,
                 "height": 1024
             },
@@ -2469,7 +2500,7 @@ export default [
                 "updated_at": "2017-06-12T15:28:30+01:00",
                 "product_id": 9737767113,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_Black_Norton_Strap_Detail.jpg?v=1497277710",
+                "src": leatherStrapBlackRedNortonV4,
                 "width": 1024,
                 "height": 1024
             }
@@ -2587,7 +2618,7 @@ export default [
                 "updated_at": "2017-06-12T15:20:08+01:00",
                 "product_id": 9737621065,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_20mm_Vintage_Strap_Stitches.jpg?v=1497277208",
+                "src": vintageLeatherStrapDarkBrownFullStitch,
                 "width": 1024,
                 "height": 1024
             },
@@ -2598,7 +2629,7 @@ export default [
                 "updated_at": "2017-06-12T15:20:14+01:00",
                 "product_id": 9737621065,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_20mm_Vintage_Strap_Stitches_Detail.jpg?v=1497277214",
+                "src": vintageLeatherStrapDarkBrownFullStitch,
                 "width": 1024,
                 "height": 1024
             }
@@ -2716,7 +2747,7 @@ export default [
                 "updated_at": "2017-06-12T15:15:04+01:00",
                 "product_id": 9737490953,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_20mm_Vintage_Strap.jpg?v=1497276904",
+                "src": vintageLeatherStrapDarkBrownSideStitch,
                 "width": 1024,
                 "height": 1024
             },
@@ -2727,7 +2758,7 @@ export default [
                 "updated_at": "2017-06-12T15:15:15+01:00",
                 "product_id": 9737490953,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/LR_20mm_Vintage_Strap_Detail.jpg?v=1497276915",
+                "src": vintageLeatherStrapDarkBrownSideStitch,
                 "width": 1024,
                 "height": 1024
             }
@@ -2804,7 +2835,7 @@ export default [
                 "updated_at": "2016-11-24T11:24:34+00:00",
                 "product_id": 8504488265,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/PS_Red_1.jpg?v=1479986674",
+                "src": pocketSquareRed,
                 "width": 1024,
                 "height": 1024
             },
@@ -2815,7 +2846,7 @@ export default [
                 "updated_at": "2016-11-24T11:24:34+00:00",
                 "product_id": 8504488265,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/PS_Red_2.jpg?v=1479986674",
+                "src": pocketSquareRed,
                 "width": 1024,
                 "height": 1024
             },
@@ -2826,7 +2857,7 @@ export default [
                 "updated_at": "2016-11-24T11:24:34+00:00",
                 "product_id": 8504488265,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/PS_Red_3.jpg?v=1479986674",
+                "src": pocketSquareRed,
                 "width": 1024,
                 "height": 1024
             },
@@ -2837,7 +2868,7 @@ export default [
                 "updated_at": "2016-11-24T11:24:34+00:00",
                 "product_id": 8504488265,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Combo_red_b2563e83-382d-4ba4-84e3-c276ac2c4781.jpg?v=1479986674",
+                "src": pocketSquareRed,
                 "width": 1024,
                 "height": 1024
             }
@@ -2898,7 +2929,7 @@ export default [
                 "updated_at": "2016-11-24T11:21:10+00:00",
                 "product_id": 8504479689,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/PS_Green_1.jpg?v=1479986470",
+                "src": pocketSquareGreen,
                 "width": 1024,
                 "height": 1024
             },
@@ -2909,7 +2940,7 @@ export default [
                 "updated_at": "2016-11-24T11:21:10+00:00",
                 "product_id": 8504479689,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/PS_Green_2.jpg?v=1479986470",
+                "src": pocketSquareGreen,
                 "width": 1024,
                 "height": 1024
             },
@@ -2920,7 +2951,7 @@ export default [
                 "updated_at": "2016-11-24T11:21:10+00:00",
                 "product_id": 8504479689,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/PS_Green_3.jpg?v=1479986470",
+                "src": pocketSquareGreen,
                 "width": 1024,
                 "height": 1024
             },
@@ -2931,7 +2962,7 @@ export default [
                 "updated_at": "2016-11-24T11:21:10+00:00",
                 "product_id": 8504479689,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Combo_green_a3be1aa2-f52f-4fe9-a205-f4529df79116.jpg?v=1479986470",
+                "src": pocketSquareGreen,
                 "width": 1024,
                 "height": 1024
             }
@@ -2993,7 +3024,7 @@ export default [
                 "updated_at": "2016-11-24T11:14:32+00:00",
                 "product_id": 8504473417,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Tie_Green_3.jpg?v=1479986072",
+                "src": tieGreen,
                 "width": 1024,
                 "height": 1024
             },
@@ -3004,7 +3035,7 @@ export default [
                 "updated_at": "2016-11-24T11:14:32+00:00",
                 "product_id": 8504473417,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Tie_Green_1.jpg?v=1479986072",
+                "src": tieGreen,
                 "width": 1024,
                 "height": 1024
             },
@@ -3015,7 +3046,7 @@ export default [
                 "updated_at": "2016-11-24T11:14:32+00:00",
                 "product_id": 8504473417,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Tie_Green_2.jpg?v=1479986072",
+                "src": tieGreen,
                 "width": 1024,
                 "height": 1024
             },
@@ -3026,7 +3057,7 @@ export default [
                 "updated_at": "2016-11-24T11:14:32+00:00",
                 "product_id": 8504473417,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Combo_green.jpg?v=1479986072",
+                "src": tieGreen,
                 "width": 1024,
                 "height": 1024
             }
@@ -3088,7 +3119,7 @@ export default [
                 "updated_at": "2016-11-24T11:04:16+00:00",
                 "product_id": 8504442825,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Tie_Red_3.jpg?v=1479985456",
+                "src": tieRed,
                 "width": 1024,
                 "height": 1024
             },
@@ -3099,7 +3130,7 @@ export default [
                 "updated_at": "2016-11-24T11:04:16+00:00",
                 "product_id": 8504442825,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Tie_Red_1.jpg?v=1479985456",
+                "src": tieRed,
                 "width": 1024,
                 "height": 1024
             },
@@ -3110,7 +3141,7 @@ export default [
                 "updated_at": "2016-11-24T11:04:16+00:00",
                 "product_id": 8504442825,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Tie_Red_2.jpg?v=1479985456",
+                "src": tieRed,
                 "width": 1024,
                 "height": 1024
             },
@@ -3121,7 +3152,7 @@ export default [
                 "updated_at": "2016-11-24T11:07:06+00:00",
                 "product_id": 8504442825,
                 "variant_ids": [],
-                "src": "https://cdn.shopify.com/s/files/1/0985/9080/products/Combo_red.jpg?v=1479985626",
+                "src": tieRed,
                 "width": 1024,
                 "height": 1024
             }

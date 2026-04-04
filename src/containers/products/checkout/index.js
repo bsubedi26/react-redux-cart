@@ -19,98 +19,97 @@ const CheckoutTitle = styled.h4`
 
 
 class Checkout extends React.Component {
- 
-  removeProduct(product) {
-      this.props.dispatch(CartAction.removeFromCart(product))
-  }
 
-  checkout() {
-      alert('Checkout Coming Soon!')
-  }
+    removeProduct(product) {
+        this.props.dispatch(CartAction.removeFromCart(product))
+    }
 
-  clearCart() {
-      console.log(this.props.getTotalPerItem)
-    // this.props.dispatch(CartAction.reset())
-  }
+    checkout() {
+        alert('Checkout Coming Soon!')
+    }
 
-  decreaseQuantity(product) {
-      if (product.quantity > 1) {
-          this.props.dispatch(CartAction.decreaseQuantity(product))
-      }
-  }
+    clearCart() {
+        this.props.dispatch(CartAction.reset())
+    }
 
-  increaseQuantity(product) {
-      this.props.dispatch(CartAction.increaseQuantity(product))
-  }
+    decreaseQuantity(product) {
+        if (product.quantity > 1) {
+            this.props.dispatch(CartAction.decreaseQuantity(product))
+        }
+    }
 
-  _renderProductsTable() {
-      const { getTotalPerItem, totalCheckoutCost } = this.props
+    increaseQuantity(product) {
+        this.props.dispatch(CartAction.increaseQuantity(product))
+    }
 
-      return (
-        <table className="table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
+    _renderProductsTable() {
+        const { getTotalPerItem, totalCheckoutCost } = this.props
 
-            <tbody>
-            {getTotalPerItem.map((item, i) => {
-                return (
-                    <tr key={i}>
-                        <td>
-                            <img alt={item.product.title} src={item.product.images[0].src} width="100" height="100" />
-                            <span className="p-2">{item.product.title}</span>
-                        </td>
-                    
-                        <td>${item.singlePrice}</td>
-                        <td>
-                            <i onClick={this.decreaseQuantity.bind(this, item)} className="fa fa-minus-square-o fa-lg pointer mx-2" aria-hidden="true"></i>
-                            <span>{item.quantity}</span>
-                            <i onClick={this.increaseQuantity.bind(this, item)} className="fa fa-plus-square-o fa-lg pointer mx-2" aria-hidden="true"></i>
-                        </td>
-                        <td>${item.totalPrice}</td>
-                        <td><i onClick={this.removeProduct.bind(this, item)} className="fa fa-trash-o fa-lg pointer" aria-hidden="true"></i></td>
+        return (
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
                     </tr>
-                )
-            })}
+                </thead>
 
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><button onClick={this.clearCart.bind(this)} className="btn btn-outline-info pointer">Clear Cart</button></td>
-                    <td><strong>${totalCheckoutCost}</strong></td>
-                    <td><button onClick={this.checkout.bind(this)} className="btn btn-outline-primary pointer">Checkout</button></td>
-                </tr>
-            
-            </tbody>
-        </table>
-      )
-  }
+                <tbody>
+                    {getTotalPerItem.map((item, i) => {
+                        return (
+                            <tr key={i}>
+                                <td>
+                                    <img alt={item.product.title} src={item.product.images[0].src} className="product-image-thumbnail" />
+                                    <span className="p-2">{item.product.title}</span>
+                                </td>
 
-  render() {
-    return (
-        <div className="mx-auto w-75 mt-5">
-            <div className="d-flex justify-content-center">
-                <CheckoutTitle>
-                    SHOPPING CART
-                </CheckoutTitle>
+                                <td>${item.singlePrice}</td>
+                                <td>
+                                    <i onClick={this.decreaseQuantity.bind(this, item)} className="fa fa-minus-square-o fa-lg pointer mx-2" aria-hidden="true"></i>
+                                    <span>{item.quantity}</span>
+                                    <i onClick={this.increaseQuantity.bind(this, item)} className="fa fa-plus-square-o fa-lg pointer mx-2" aria-hidden="true"></i>
+                                </td>
+                                <td>${item.totalPrice}</td>
+                                <td><i onClick={this.removeProduct.bind(this, item)} className="fa fa-trash-o fa-lg pointer" aria-hidden="true"></i></td>
+                            </tr>
+                        )
+                    })}
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><button onClick={this.clearCart.bind(this)} className="btn btn-outline-info pointer">Clear Cart</button></td>
+                        <td><strong>${totalCheckoutCost}</strong></td>
+                        <td><button onClick={this.checkout.bind(this)} className="btn btn-outline-primary pointer">Checkout</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        )
+    }
+
+    render() {
+        return (
+            <div className="mx-auto w-75 mt-5">
+                <div className="d-flex justify-content-center">
+                    <CheckoutTitle>
+                        SHOPPING CART
+                    </CheckoutTitle>
+                </div>
+
+                {(this.props.totalItemsInCart > 0) ? this._renderProductsTable() : <div className="mt-4 text-center"><hr /><h5>There are no items currently in the cart!</h5></div>}
+
             </div>
-
-            { (this.props.totalItemsInCart > 0) ? this._renderProductsTable() : <div className="mt-4 text-center"><hr/><h5>There are no items currently in the cart!</h5></div> }
-
-        </div>
-    )
-  }
+        )
+    }
 };
 
 Checkout.propTypes = {
-  totalItemsInCart: PropTypes.number.isRequired,
-  getTotalPerItem: PropTypes.array.isRequired,
-  totalCheckoutCost: PropTypes.number.isRequired
+    totalItemsInCart: PropTypes.number.isRequired,
+    getTotalPerItem: PropTypes.array.isRequired,
+    totalCheckoutCost: PropTypes.number.isRequired
 }
 
 const mapState = state => ({

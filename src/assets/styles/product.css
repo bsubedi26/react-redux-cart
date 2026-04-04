@@ -1,5 +1,5 @@
 .top-title {
-    font-family: "Agenda Light",Helvetica,Arial,sans-serif;
+    font-family: "Agenda Light", Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.4;
@@ -20,15 +20,15 @@
 
 .product-title {
     display: block;
-    color: #000;
-    font-size: 0.6rem;
+    color: #8c3a3a;
+    font-size: 1rem;
     text-decoration: none;
     text-align: center;
 }
 
 .product-price {
     display: block;
-    font-family: "Agenda Light",Helvetica,Arial,sans-serif;
+    font-family: "Agenda Light", Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-size: 0.75rem;
     font-weight: 400;
@@ -36,11 +36,28 @@
     color: #666;
 }
 
+.product-image-thumbnail {
+    display: inline-block;
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.product-image {
+    display: block;
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
 .detail-description {
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
 }
+
 .checkmark {
     color: var(--bre-red);
 }

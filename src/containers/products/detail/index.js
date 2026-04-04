@@ -20,7 +20,7 @@ class ProductDetail extends React.Component {
             this.showToast()
         }
     }
-    
+
     _renderAddToCartConfirmation() {
         return (
             <FadeInAndFadeOut delay="2s">
@@ -74,11 +74,11 @@ class ProductDetail extends React.Component {
                         <ProductPrice className="pt-1">${product.variants[0].price}</ProductPrice>
                         <ProductPrice className="pt-2">{product.variants[0].sku}</ProductPrice>
                         <i onClick={this.decreaseQuantity} className="fa fa-minus pointer" aria-hidden="true"></i>
-                        <input onChange={() => {} } value={this.state.quantity} style={{ height: '30px', width: '20%' }} className="m-2 d-inline-block form-control text-center" />
+                        <input onChange={() => { }} value={this.state.quantity} style={{ height: '30px', width: '20%' }} className="m-2 d-inline-block form-control text-center" />
                         <i onClick={this.increaseQuantity} className="fa fa-plus pointer" aria-hidden="true"></i>
                         <br />
 
-                        <div className="row">
+                        <div className="row p-3">
                             <button className="mt-2 btn btn-sm pointer btn-add-cart" onClick={this.addToCart.bind(this, product)}>ADD TO CART</button>
                             {this.state.showAddToCartConfirmation ? this._renderAddToCartConfirmation() : null}
                         </div>
@@ -97,7 +97,7 @@ class ProductDetail extends React.Component {
 ProductDetail.propTypes = {
     product: PropTypes.object.isRequired
 }
-  
+
 const findProduct = (state, id) => {
     return state.bremont.find(item => item.id === parseInt(id, 10))
 }

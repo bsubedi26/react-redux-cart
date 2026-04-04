@@ -73,14 +73,14 @@ export class ImageViewer extends React.Component {
         return (
             <div>
                 <div className="current-image">
-                    <img className="product-image pointer" src={images[currentIdx].src} alt={images[currentIdx].title} width="300" height="300" />
+                    <img className="product-image pointer" src={images[currentIdx].src} alt={images[currentIdx].title} />
                 </div>
 
-                <div className="other-images">
+                {/* <div className="other-images">
                     {images.map((image, i) => {
                         if (currentIdx !== i) {
                             return (
-                                <img onClick={this.changeImage.bind(this, i)} key={image.id} className="border-1 p-2 product-image pointer" src={image.src} alt={image.title} width="70" height="70" />
+                                <img onClick={this.changeImage.bind(this, i)} key={image.id} className="border-1 p-2 product-image pointer" src={image.src} alt={image.title} width="70" />
                             )
                         }
                         else {
@@ -88,7 +88,7 @@ export class ImageViewer extends React.Component {
                         }
 
                     })}
-                </div>
+                </div> */}
             </div>
         )
     }

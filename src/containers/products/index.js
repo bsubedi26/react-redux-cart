@@ -23,24 +23,23 @@ class ProductsPage extends Component {
             PRODUCT CATALOG
           </h4>
 
-        </div> 
+        </div>
 
-        <div className="row justify-content-center mx-auto w-75">
-
+        <div className="row justify-content-center mx-auto w-75 mb-4">
           {this.props.bremont && this.props.bremont.map((item, i) => {
             return (
               <div className="m-3" key={i}>
-                <img onClick={this.routeToDetail.bind(this, item)} className="product-image pointer" src={item.images[0].src} alt={item.title} width="240" height="240" />
+                <img onClick={this.routeToDetail.bind(this, item)} className="product-image pointer" src={item.images[0].src} alt={item.title} />
                 <h5 onClick={this.routeToDetail.bind(this, item)} className="product-title mt-4 pointer">{item.title}</h5>
                 <span onClick={this.routeToDetail.bind(this, item)} className="product-price mt-3 pointer">${item.variants[0].price}</span>
                 {/* <button onClick={this.addToCart.bind(this, item)} className="btn btn-outline-primary pointer">Add</button> */}
-            </div>
+              </div>
             )
-            
+
           })}
         </div>
-        
-         
+
+
 
       </div>
 
